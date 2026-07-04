@@ -22,7 +22,7 @@ const SLIDES: SlideItem[] = [
   },
   {
     id: 2,
-    imageFallback: `${import.meta.env.BASE_URL}shoten1.jpeg',
+    imageFallback: `${import.meta.env.BASE_URL}shoten1.jpeg`,
     imageDefault: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&q=80&w=1600',
     title: '',
     description: 'レトロな理容室のサインポール、すれ違う子どもたち。お宮町の通りを行き交う人々の笑顔が、この街の温かい日常を紡いでいます。',
@@ -30,7 +30,7 @@ const SLIDES: SlideItem[] = [
   },
   {
     id: 3,
-    imageFallback: `${import.meta.env.BASE_URL}coffee.png',
+    imageFallback: `${import.meta.env.BASE_URL}coffee.png`,
     imageDefault: 'https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1600',
     alt: '挽きたての珈琲',
     title: '',
