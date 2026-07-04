@@ -9,7 +9,7 @@ function getOrInitBGM(): HTMLAudioElement | null {
     try {
       bgmAudio = new Audio(`${import.meta.env.BASE_URL}audio/bgm.mp3`);
       bgmAudio.loop = true;
-      bgmAudio.volume = 0; // Starts at 0 for smooth fade-in
+      bgmAudio.volume = 0;
       bgmAudio.addEventListener('error', (e) => {
         console.warn('BGM source could not be loaded or is not available. Failing gracefully.', e);
       });

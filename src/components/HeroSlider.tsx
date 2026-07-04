@@ -45,7 +45,6 @@ export const HeroSlider: React.FC = () => {
     SLIDES.map(slide => slide.imageFallback)
   );
 
-  // Check if local files fail to load, and fallback to Unsplash images
   const handleImageError = (index: number) => {
     setImageSources(prev => {
       const updated = [...prev];
@@ -75,11 +74,10 @@ export const HeroSlider: React.FC = () => {
   return (
     <div 
       className="relative mx-auto w-[85%] aspect-video sm:w-full sm:max-w-[750px] sm:aspect-[32/9] overflow-hidden bg-neutral-900 group"
-  id="hero-slider-container"
-  onMouseEnter={() => setIsPlaying(false)}
-  onMouseLeave={() => setIsPlaying(true)}
+      id="hero-slider-container"
+      onMouseEnter={() => setIsPlaying(false)}
+      onMouseLeave={() => setIsPlaying(true)}
     >
-      {/* Slides Container */}
       <div className="absolute inset-0 w-full h-full" id="slider-viewport">
         <AnimatePresence mode="wait">
           <motion.div
@@ -91,7 +89,6 @@ export const HeroSlider: React.FC = () => {
             className="absolute inset-0 w-full h-full"
             id={`slide-${currentIndex}`}
           >
-            {/* Background Image Cover */}
             <img
               src={imageSources[currentIndex]}
               alt={SLIDES[currentIndex].alt}
@@ -102,7 +99,6 @@ export const HeroSlider: React.FC = () => {
               id={`slide-img-${currentIndex}`}
             />
 
-            {/* Centered Slide Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 py-6 sm:px-20 sm:py-16 z-20 select-none gap-4">
               <p 
                 className="text-xs sm:text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed font-normal font-serif tracking-[0.1em] max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
@@ -116,7 +112,6 @@ export const HeroSlider: React.FC = () => {
         </AnimatePresence>
       </div>
 
-      {/* Navigation Arrow - Left */}
       <button
         onClick={handlePrev}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/10 hover:bg-black/35 text-white/80 hover:text-white transition-colors opacity-0 group-hover:opacity-100 hidden sm:flex items-center justify-center cursor-pointer"
@@ -126,7 +121,6 @@ export const HeroSlider: React.FC = () => {
         <ChevronLeft className="w-6 h-6" />
       </button>
 
-      {/* Navigation Arrow - Right */}
       <button
         onClick={handleNext}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/10 hover:bg-black/35 text-white/80 hover:text-white transition-colors opacity-0 group-hover:opacity-100 hidden sm:flex items-center justify-center cursor-pointer"
@@ -136,7 +130,6 @@ export const HeroSlider: React.FC = () => {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Pagination Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2.5" id="slider-pagination">
         {SLIDES.map((_, index) => (
           <button
