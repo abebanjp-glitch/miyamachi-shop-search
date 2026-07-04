@@ -74,10 +74,10 @@ export const HeroSlider: React.FC = () => {
 
   return (
     <div 
-      className="relative w-full max-w-[750px] aspect-video sm:rounded-none overflow-hidden bg-neutral-900 group"
-      id="hero-slider-container"
-      onMouseEnter={() => setIsPlaying(false)}
-      onMouseLeave={() => setIsPlaying(true)}
+      className="relative mx-auto w-[85%] aspect-video sm:w-full sm:max-w-[750px] sm:aspect-[32/9] overflow-hidden bg-neutral-900 group"
+  id="hero-slider-container"
+  onMouseEnter={() => setIsPlaying(false)}
+  onMouseLeave={() => setIsPlaying(true)}
     >
       {/* Slides Container */}
       <div className="absolute inset-0 w-full h-full" id="slider-viewport">
