@@ -74,7 +74,7 @@ export const HeroSlider: React.FC = () => {
 
   return (
     <div 
-      className="relative w-full max-w-[1500px] aspect-video sm:rounded-none overflow-hidden bg-neutral-900 group"
+      className="relative w-full max-w-[1500px] aspect-[32/9] sm:rounded-none overflow-hidden bg-neutral-900 group"
       id="hero-slider-container"
       onMouseEnter={() => setIsPlaying(false)}
       onMouseLeave={() => setIsPlaying(true)}
