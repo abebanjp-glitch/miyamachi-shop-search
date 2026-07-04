@@ -1,0 +1,6 @@
+{
+  "name": "宮町商店街 店舗検索ページ",
+  "description": "宮町商店街の店舗を業種カテゴリー、エリア、フリーワードで複合検索できるレスポンシブな店舗検索ページ。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
