@@ -13,7 +13,7 @@ function getOrInitBGM(): HTMLAudioElement | null {
 
   if (!bgmAudio) {
     try {
-      bgmAudio = new Audio('/audio/bgm.mp3');
+      bgmAudio = new Audio(`${import.meta.env.BASE_URL}audio/bgm.mp3`);
       bgmAudio.loop = true;
       bgmAudio.volume = 0; // Starts at 0 for smooth fade-in
 
