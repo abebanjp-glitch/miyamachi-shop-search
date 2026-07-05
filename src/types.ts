@@ -9,6 +9,7 @@ export interface Store {
   services: string;
   area: string;
   image?: string;
+  officialImage?: string;
   website?: string;
 }
 

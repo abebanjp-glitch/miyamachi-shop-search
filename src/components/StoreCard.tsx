@@ -101,6 +101,7 @@ const DEFAULT_IMAGE_LIST = [
 
 export const getStoreImageUrl = (store: Store, customImage?: string) => {
   if (customImage) return customImage;
+  if (store.officialImage) return store.officialImage;
   if (store.image) return store.image;
 
   const name = store.name || '';

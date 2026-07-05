@@ -8,7 +8,8 @@
     "closedDay": "土・日・祝日",
     "services": "アクセサリー",
     "id": 1,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/01/181226kireihp.jpg"
   },
   {
     "name": "宮町メガネ館",
@@ -19,7 +20,8 @@
     "closedDay": "日曜日",
     "services": "メガネ販売",
     "id": 2,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/111023miyamachi-meganekan.jpg"
   },
   {
     "name": "ペットショップさまん",
@@ -31,7 +33,8 @@
     "services": "愛犬のトリミングや小動物も泊まれるペットホテル・ペット用品 of 販売",
     "id": 3,
     "area": "宮町",
-    "website": "http://www.pet-saman.com/"
+    "website": "http://www.pet-saman.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/150202saman-1.jpg"
   },
   {
     "name": "うらいし",
@@ -42,7 +45,8 @@
     "closedDay": "第三日曜日",
     "services": "婦人服販売",
     "id": 4,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/shop-1-1.jpg"
   },
   {
     "name": "ふとんの菅野",
@@ -54,7 +58,8 @@
     "services": "快眠枕、オーダーメイド枕、整圧ふとん、ドクターセラ、羽毛ふとんなど寝具販売とリフォーム。",
     "id": 5,
     "area": "宮町",
-    "website": "https://futonkanno.stores.jp/"
+    "website": "https://futonkanno.stores.jp/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/shop-2.jpg"
   },
   {
     "name": "オーディオショップケイキ",
@@ -66,7 +71,8 @@
     "services": "オーディオ製品（中古品含む）販売、家電品販売、ビデオ撮影",
     "id": 6,
     "area": "宮町",
-    "website": "https://www.a-s-keiki.com/"
+    "website": "https://www.a-s-keiki.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/shop-1-2.jpg"
   },
   {
     "name": "フローリスト華",
@@ -77,7 +83,8 @@
     "closedDay": "",
     "services": "定休日 日曜日 生花販売",
     "id": 7,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/111023furo-risuto-hana.jpg"
   },
   {
     "name": "アトリエ モルソー",
@@ -89,7 +96,8 @@
     "services": "アンティーク家具・雑貨販売",
     "id": 8,
     "area": "宮町",
-    "website": "https://ameblo.jp/morceau-a/"
+    "website": "https://ameblo.jp/morceau-a/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/2moruso-.jpg"
   },
   {
     "name": "おのでら生花店",
@@ -100,7 +108,8 @@
     "closedDay": "日曜日",
     "services": "生花販売",
     "id": 9,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/10onodera-seikaten.jpg"
   },
   {
     "name": "村山輪業商会",
@@ -111,7 +120,8 @@
     "closedDay": "日曜日",
     "services": "自転車・スクーター販売修理",
     "id": 10,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/05/180521murayama-ringyou.jpg"
   },
   {
     "name": "二コモア ハンドメイドの店",
@@ -122,7 +132,8 @@
     "closedDay": "木曜・日曜・祝日",
     "services": "着物リメイク製品、小物（バック、テッシュケース、ポーチ等）",
     "id": 11,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/08/190810nikomoa1-1.jpg"
   },
   {
     "name": "セブンイレブン 仙台宮町1丁目店",
@@ -133,7 +144,8 @@
     "closedDay": "なし",
     "services": "コンビニエンスストア ATM お酒 揚げ物惣菜 ドーナツ セブンカフェ マルチコピー機",
     "id": 12,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/02/20200215sebun-open-1.jpg"
   },
   {
     "name": "はぴcafé",
@@ -144,7 +156,8 @@
     "closedDay": "土・日曜",
     "services": "軽食・喫茶・駄菓子 障害福祉サービス事業所（就労継続Ｂ型）",
     "id": 13,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/10/181001hapikafye.jpg"
   },
   {
     "name": "中国懐石料理一元",
@@ -155,7 +168,8 @@
     "closedDay": "なし",
     "services": "完全予約制でゆっくりとお食事できる中国懐石料理のお店",
     "id": 14,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171216itigen.jpg"
   },
   {
     "name": "パティスリー ル・ボア ドゥ・フェ",
@@ -167,7 +181,8 @@
     "services": "洋菓子店",
     "id": 15,
     "area": "宮町",
-    "website": "https://ameblo.jp/leboisdefee-0911/"
+    "website": "https://ameblo.jp/leboisdefee-0911/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171216ru-boa-toushouguu.jpg"
   },
   {
     "name": "エンドー餅店",
@@ -179,7 +194,8 @@
     "services": "仙台名物「づんだ餅」他、くるみ餅、おはぎ、おだんご、大福などの製造販売",
     "id": 16,
     "area": "宮町",
-    "website": "https://zundamochi.com/"
+    "website": "https://zundamochi.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/endow.jpg"
   },
   {
     "name": "酒処 ひで",
@@ -190,7 +206,8 @@
     "closedDay": "日曜",
     "services": "居酒屋",
     "id": 17,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/1sakedokoro-hide.jpg"
   },
   {
     "name": "茶寮 ここの",
@@ -201,7 +218,8 @@
     "closedDay": "水曜日",
     "services": "野菜中心の創作料理",
     "id": 18,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/09/180818kokono-gaikan.jpg"
   },
   {
     "name": "まかない屋 宮町店",
@@ -212,7 +230,8 @@
     "closedDay": "日曜・祝日",
     "services": "お弁当・お惣菜販売",
     "id": 19,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171218makanaiya.jpg"
   },
   {
     "name": "やきとり大吉 仙台宮町店",
@@ -223,7 +242,8 @@
     "closedDay": "水曜日",
     "services": "やきとり・居酒屋",
     "id": 20,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/11/191114daikiti-miyamachi.jpg"
   },
   {
     "name": "秀作カレー",
@@ -234,7 +254,8 @@
     "closedDay": "火曜日（本業のお笑いの仕事が休みの日だけ営業）",
     "services": "カレー",
     "id": 21,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/07/20230914shousaku-kare-.jpg"
   },
   {
     "name": "友寿司",
@@ -245,7 +266,8 @@
     "closedDay": "水曜",
     "services": "寿司・飲食業",
     "id": 22,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/shop-7.jpg"
   },
   {
     "name": "EDGE STORE",
@@ -257,7 +279,8 @@
     "services": "コーヒーとハンバーガー",
     "id": 23,
     "area": "宮町",
-    "website": "https://www.instagram.com/edgestore_sendai/"
+    "website": "https://www.instagram.com/edgestore_sendai/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/02/20201119edge-store.jpg"
   },
   {
     "name": "遊食屋 なおん家",
@@ -268,7 +291,8 @@
     "closedDay": "不定休",
     "services": "居酒屋（海鮮料理・あぶりうに等）",
     "id": 24,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/07/20240718naonti-gaikan-1.jpg"
   },
   {
     "name": "韓国家庭料理 扶餘(プヨ)の冷凍自販機",
@@ -279,7 +303,8 @@
     "closedDay": "なし",
     "services": "海鮮チヂミなど",
     "id": 25,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2023/02/20220401puyo1.jpg"
   },
   {
     "name": "スタジオ ファーム プラス",
@@ -290,7 +315,8 @@
     "closedDay": "不定休",
     "services": "カラオケ店",
     "id": 26,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/07/20240523fa-mu1.jpg"
   },
   {
     "name": "Looser(ルーザー)",
@@ -301,7 +327,8 @@
     "closedDay": "月曜",
     "services": "フード・ドリンク（アルコール含む）・カラオケ",
     "id": 27,
-    "area": "小松島"
+    "area": "小松島",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/02/20191221ru-za-.jpg"
   },
   {
     "name": "uncle mike smoothie＆café",
@@ -313,7 +340,8 @@
     "services": "スムージー、スムージーボール、コーヒー",
     "id": 28,
     "area": "小田原",
-    "website": "https://unclemike.jp/"
+    "website": "https://unclemike.jp/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2023/06/20230525sumu-ji-gaikan.jpg"
   },
   {
     "name": "琉球居酒屋 めーごーさぁー",
@@ -324,7 +352,8 @@
     "closedDay": "月曜日",
     "services": "沖縄料理など",
     "id": 29,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2023/06/20230303me-go-sa-gaikan.jpg"
   },
   {
     "name": "ビストロでぐち",
@@ -335,7 +364,8 @@
     "closedDay": "水曜日",
     "services": "フランス料理",
     "id": 30,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/3deguti.jpg"
   },
   {
     "name": "本家かまどや 東照宮店",
@@ -346,7 +376,8 @@
     "closedDay": "年中無休",
     "services": "お弁当の配達もＯＫ",
     "id": 31,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/05/180521kamadoya-1.jpg"
   },
   {
     "name": "スナック遊",
@@ -357,7 +388,8 @@
     "closedDay": "毎週日曜日・祝日・毎月第４土曜日",
     "services": "スナック",
     "id": 32,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/you.jpg"
   },
   {
     "name": "yank（ヤンク）",
@@ -368,7 +400,8 @@
     "closedDay": "火曜日",
     "services": "居酒屋",
     "id": 33,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/6yank.jpg"
   },
   {
     "name": "パティスリー ミティーク",
@@ -380,7 +413,8 @@
     "services": "洋菓子販売",
     "id": 34,
     "area": "宮町",
-    "website": "http://mythique-sendai.com/"
+    "website": "http://mythique-sendai.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/mys.jpg"
   },
   {
     "name": "ボンソワール",
@@ -391,7 +425,8 @@
     "closedDay": "不定休",
     "services": "カフェ＆スナック",
     "id": 35,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/06/190603bonnsowa-ru.jpg"
   },
   {
     "name": "永和中華物産店",
@@ -403,7 +438,8 @@
     "services": "中国の食料品調味料など",
     "id": 36,
     "area": "宮町",
-    "website": "https://www.chukaeki.com/"
+    "website": "https://www.chukaeki.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/02/201912281eiwachuukabussannten.jpg"
   },
   {
     "name": "お弁当のふるさと亭 宮町店",
@@ -414,7 +450,8 @@
     "closedDay": "日曜日",
     "services": "弁当販売",
     "id": 37,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/12furusatotei.jpg"
   },
   {
     "name": "居酒屋チューさん",
@@ -425,7 +462,8 @@
     "closedDay": "なし",
     "services": "居酒屋",
     "id": 38,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/13chu-san.jpg"
   },
   {
     "name": "スナックさくらんぼ",
@@ -436,7 +474,8 @@
     "closedDay": "日・祝日",
     "services": "スナック",
     "id": 39,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/sakuranbo.jpg"
   },
   {
     "name": "コーヒーショップ タンポポ",
@@ -447,7 +486,8 @@
     "closedDay": "日・祝日",
     "services": "喫茶店",
     "id": 40,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/19tanpopo.jpg"
   },
   {
     "name": "ＩＺＡＫＡＹＡ 仁",
@@ -458,7 +498,8 @@
     "closedDay": "なし",
     "services": "居酒屋",
     "id": 41,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/130210izakaya-jin.jpg"
   },
   {
     "name": "小田原５丁目 ホームラン食堂",
@@ -469,7 +510,8 @@
     "closedDay": "水曜日",
     "services": "ラーメン・定食類",
     "id": 42,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/130425ho-murann-shokudou.jpg"
   },
   {
     "name": "うめぇ-丼",
@@ -480,7 +522,8 @@
     "closedDay": "第1,第3日曜日",
     "services": "お弁当",
     "id": 43,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/130605ume-don.jpg"
   },
   {
     "name": "伊達酒場 強太朗",
@@ -491,7 +534,8 @@
     "closedDay": "第一日曜日",
     "services": "居酒屋",
     "id": 44,
-    "area": "花京院"
+    "area": "花京院",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/131011kyoutarou.jpg"
   },
   {
     "name": "焼肉ホルモン 百万馬力",
@@ -502,7 +546,8 @@
     "closedDay": "月曜日",
     "services": "焼肉",
     "id": 45,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/131011hyakumannbariki.jpg"
   },
   {
     "name": "やきとり大吉 仙台宮町店(2)",
@@ -513,7 +558,8 @@
     "closedDay": "水曜日",
     "services": "やきとり",
     "id": 46,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/11/191114daikiti-miyamachi.jpg"
   },
   {
     "name": "クルール フラン",
@@ -524,7 +570,8 @@
     "closedDay": "不定休",
     "services": "パン ケーキ 焼菓子",
     "id": 47,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/141121kuru-ru-rufuran.jpg"
   },
   {
     "name": "Indian curry SANTA+宮町店",
@@ -536,7 +583,8 @@
     "services": "インドカレー・インド風焼き鳥・インド風餃子",
     "id": 48,
     "area": "宮町",
-    "website": "https://curry-santa.com/"
+    "website": "https://curry-santa.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/09/190626santa-purasu.jpg"
   },
   {
     "name": "晩酌屋 コズコズ",
@@ -547,7 +595,8 @@
     "closedDay": "水曜（変更あり）",
     "services": "居酒屋",
     "id": 49,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/11/191114kozukozu.jpg"
   },
   {
     "name": "炭火焼 八剣伝 宮町店",
@@ -558,7 +607,8 @@
     "closedDay": "年中無休",
     "services": "居酒屋",
     "id": 50,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/09/180802khakkennden1.jpg"
   },
   {
     "name": "日本酒Ｂar 酒らら",
@@ -569,7 +619,8 @@
     "closedDay": "火曜",
     "services": "日本酒バー",
     "id": 51,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/01/181209surara.jpg"
   },
   {
     "name": "焼鳥 三代目 庄之助",
@@ -580,7 +631,8 @@
     "closedDay": "月曜日・火曜日",
     "services": "やきとり",
     "id": 52,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/02/20200129tenmanokura.jpg"
   },
   {
     "name": "からあげ 金と銀 仙台宮町店",
@@ -591,7 +643,8 @@
     "closedDay": "不定休",
     "services": "からあげ等 テイクアウト",
     "id": 53,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/05/20210519karaage-kintogin-1.jpg"
   },
   {
     "name": "上海苑",
@@ -602,7 +655,8 @@
     "closedDay": "月曜日",
     "services": "昼：定食類テイクアウト 夜：飲料品・上海家庭料理",
     "id": 54,
-    "area": "その他"
+    "area": "その他",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/07/20210701shanhaien-1.jpg"
   },
   {
     "name": "Pan＆Gateau CURCUMA",
@@ -613,7 +667,8 @@
     "closedDay": "日曜・祝日（不定休あり）",
     "services": "本格的なフランスパン、ヴイエノワズリー、そうざいパン、焼き菓子",
     "id": 55,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2022/07/20220629curcuma1.jpg"
   },
   {
     "name": "清水屋本店",
@@ -625,7 +680,8 @@
     "services": "手打ちそば、うどんの店",
     "id": 56,
     "area": "宮町",
-    "website": "https://shimizuya-sendai.com/"
+    "website": "https://shimizuya-sendai.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/shop-5.jpg"
   },
   {
     "name": "田代酒場",
@@ -636,7 +692,8 @@
     "closedDay": "水曜",
     "services": "居酒屋",
     "id": 57,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/07/20210711tasiro-sakaba-1.jpg"
   },
   {
     "name": "仙台ホルモン・焼肉 ときわ亭 東照宮店",
@@ -647,7 +704,8 @@
     "closedDay": "不定休",
     "services": "焼肉・ホルモン",
     "id": 58,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/08/2horomon-tokiwatei.jpg"
   },
   {
     "name": "シフォンケーキ専門店 Anuenue",
@@ -659,7 +717,8 @@
     "services": "シフォンケーキ、プリン、焼き菓子",
     "id": 59,
     "area": "宮町",
-    "website": "https://anuenue-sendai.com/"
+    "website": "https://anuenue-sendai.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/09/20240913makanaiya-mitumori-gaikan-1.jpg"
   },
   {
     "name": "Cafe・Bar ネリーの家",
@@ -670,7 +729,8 @@
     "closedDay": "月曜日",
     "services": "ナポリタン、和風パスタ、ホットサンド各種、フレンチトースト、チーズケーキ、クリームソーダ、コーヒー、他",
     "id": 60,
-    "area": "小松島"
+    "area": "小松島",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2023/02/20230131nerinoie-gaikan.jpg"
   },
   {
     "name": "ファミリーマート宮町四丁目店",
@@ -681,7 +741,8 @@
     "closedDay": "なし",
     "services": "コンビニエンスストア",
     "id": 61,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171216famiri-ma-ro-miyamatiten.jpg"
   },
   {
     "name": "イオン 仙台宮町店",
@@ -692,7 +753,8 @@
     "closedDay": "なし",
     "services": "食品・日用雑貨",
     "id": 62,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/03/20210311ion-sendaimiyamachi.jpeg"
   },
   {
     "name": "阿部八酒店",
@@ -704,7 +766,8 @@
     "services": "酒類販売・日本酒専門",
     "id": 63,
     "area": "宮町",
-    "website": "https://abehatisake.livedoor.blog/"
+    "website": "https://abehatisake.livedoor.blog/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171216abehti.jpg"
   },
   {
     "name": "寿園茶舗",
@@ -715,7 +778,8 @@
     "closedDay": "日曜日",
     "services": "日本茶、健康茶、茶道具、茶器、海苔、椎茸、お菓子等の販売",
     "id": 64,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-6.jpg"
   },
   {
     "name": "阿部幸商店",
@@ -727,7 +791,8 @@
     "services": "味噌、醤油醸造販売",
     "id": 65,
     "area": "宮町",
-    "website": "https://abekoumiso.com/"
+    "website": "https://abekoumiso.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/abe.jpg"
   },
   {
     "name": "SEIYU小田原店",
@@ -738,7 +803,8 @@
     "closedDay": "なし",
     "services": "スーパーマーケット",
     "id": 66,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-9.jpg"
   },
   {
     "name": "ファミリーマート 小田原五丁目店",
@@ -749,7 +815,8 @@
     "closedDay": "なし",
     "services": "コンビニエンスストア",
     "id": 67,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/09/20200916famina-odawaraten-1.jpg"
   },
   {
     "name": "フレッシュショップ魚市",
@@ -760,7 +827,8 @@
     "closedDay": "日曜・祝日",
     "services": "魚、野菜販売",
     "id": 68,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/12/20211211uoiti-1.jpg"
   },
   {
     "name": "百済（くだら）キムチ",
@@ -771,7 +839,8 @@
     "closedDay": "日曜日",
     "services": "キムチ製造販売",
     "id": 69,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/120224kudara-kimuti.jpg"
   },
   {
     "name": "兎豆屋（tomameya）",
@@ -783,7 +852,8 @@
     "services": "国産大豆専門豆腐製造販売",
     "id": 70,
     "area": "福沢町",
-    "website": "https://www.tomameya.com/"
+    "website": "https://www.tomameya.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171216tomameya.jpg"
   },
   {
     "name": "花京院市場 本店",
@@ -794,7 +864,8 @@
     "closedDay": "なし",
     "services": "生鮮品販売",
     "id": 71,
-    "area": "花京院"
+    "area": "花京院",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/07/20240713kakyouinnhonnten.jpg"
   },
   {
     "name": "スガ焙煎珈琲豆屋",
@@ -806,7 +877,8 @@
     "services": "コーヒー豆販売",
     "id": 72,
     "area": "宮町",
-    "website": "https://www.sugabaisen.com/"
+    "website": "https://www.sugabaisen.com/",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/11sugako-hi-.jpg"
   },
   {
     "name": "ローソン仙台宮町通店",
@@ -817,7 +889,8 @@
     "closedDay": "年中無休",
     "services": "コンビニエンスストア",
     "id": 73,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/15lawson.jpg"
   },
   {
     "name": "フレッシュ フィッシュ＆フードショップKIKUCHI",
@@ -828,7 +901,8 @@
     "closedDay": "日曜・祭日",
     "services": "鮮魚販売・仕出し料理・お弁当・お惣菜販売",
     "id": 74,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/P1010248.jpg"
   },
   {
     "name": "みなとや 小田原店",
@@ -839,7 +913,8 @@
     "closedDay": "隔週月曜日",
     "services": "精肉、総菜、加工肉の販売",
     "id": 75,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/07/190723minatoya.jpg"
   },
   {
     "name": "韓国商会",
@@ -850,7 +925,8 @@
     "closedDay": "日曜日",
     "services": "キムチ お弁当 惣菜",
     "id": 76,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/120628kankokushoukai.jpg"
   },
   {
     "name": "SALT HOUSE 塩屋",
@@ -861,7 +937,8 @@
     "closedDay": "月曜・祝日（不定休有）",
     "services": "ヒマラヤ岩塩を中心に世界の塩を扱う塩の専門店",
     "id": 77,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/08/190818sioya1-1.jpg"
   },
   {
     "name": "村形青果店",
@@ -872,7 +949,8 @@
     "closedDay": "日曜・祝日",
     "services": "青果販売、手作り漬物",
     "id": 78,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/t1-1.jpg"
   },
   {
     "name": "株式会社親幸",
@@ -883,7 +961,8 @@
     "closedDay": "土曜・日曜・祝日",
     "services": "損害保険",
     "id": 79,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/2012-0220jinkou.jpg"
   },
   {
     "name": "家族葬の仙和 宮町ホール",
@@ -894,7 +973,8 @@
     "closedDay": "なし",
     "services": "葬祭業、小売業（仏壇、仏具）",
     "id": 80,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2025/05/20250514senwa2-1.jpg"
   },
   {
     "name": "仙南信用金庫 二日町支店",
@@ -905,7 +985,8 @@
     "closedDay": "土曜・日曜・祝日・12月31日-1月3日",
     "services": "金融業（銀行業）",
     "id": 81,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/11/PXL_20241118sennaisinyoukinko.jpg"
   },
   {
     "name": "朝日住宅センター",
@@ -916,7 +997,8 @@
     "closedDay": "GW・お盆・年末年始",
     "services": "不動産業",
     "id": 82,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/tenpo.jpg"
   },
   {
     "name": "仙台銀行 宮町支店（上杉店支店内）",
@@ -927,7 +1009,8 @@
     "closedDay": "土曜・日曜・祝日・12月31日-1月3日",
     "services": "金融業（銀行業）",
     "id": 83,
-    "area": "上杉"
+    "area": "上杉",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/07/20231224dendaiginkou-kamisugisiten.jpg"
   },
   {
     "name": "産後ケアハウス ママん家",
@@ -938,7 +1021,8 @@
     "closedDay": "不定休",
     "services": "産後ケア（宿泊・デイサービス・訪問）・母乳外来・妊産婦ヨガ",
     "id": 84,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2023/06/20230409mamanti.jpg"
   },
   {
     "name": "有限会社キーステーション",
@@ -949,7 +1033,8 @@
     "closedDay": "日曜日・祝日",
     "services": "不動産業",
     "id": 85,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/3ki-sute-shon.jpg"
   },
   {
     "name": "株式会社ハウテック",
@@ -960,7 +1045,8 @@
     "closedDay": "日曜・祝祭日",
     "services": "住まいのリフォーム、修繕",
     "id": 86,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-10.jpg"
   },
   {
     "name": "杜の都信用金庫",
@@ -971,7 +1057,8 @@
     "closedDay": "土曜・日曜・祝日・12月31日-1月3日",
     "services": "金融業（信用金庫業）",
     "id": 87,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/P1010248.jpg"
   },
   {
     "name": "Grow op（株）グローアップ",
@@ -982,7 +1069,8 @@
     "closedDay": "日曜・祝日",
     "services": "住宅・店舗・アパート・マンションリフォーム、インテリア",
     "id": 88,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171218goru-appu.jpg"
   },
   {
     "name": "のいえ保育園",
@@ -993,7 +1081,8 @@
     "closedDay": "なし",
     "services": "保育所",
     "id": 89,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/07/20210406noie2.jpg"
   },
   {
     "name": "株式会社エービーエステート",
@@ -1004,7 +1093,8 @@
     "closedDay": "水曜・第二、第四日曜",
     "services": "不動産仲介業、賃貸・売買・コンサルティング、管理",
     "id": 90,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-11.jpg"
   },
   {
     "name": "不動産のラビット株式会社",
@@ -1015,7 +1105,8 @@
     "closedDay": "水曜日",
     "services": "不動産業",
     "id": 91,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/07/180709rabitto-kanban-1.jpg"
   },
   {
     "name": "GALLERY&MARCHE ABC",
@@ -1026,7 +1117,8 @@
     "closedDay": "不定休",
     "services": "ギャラリー＆マルシェ（HP: https://gallery-marche.abcorpo.com/）",
     "id": 92,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2026/06/20260109omiyamati-gyarari-marushe1.jpg"
   },
   {
     "name": "放課後デイサービス「其の参」",
@@ -1037,7 +1129,8 @@
     "closedDay": "日曜日・祝日",
     "services": "障害福祉サービス業",
     "id": 93,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2026/06/20260511sonosan-gaikan.jpg"
   },
   {
     "name": "みおくり邸宅宮町（プレミアム家族葬・清月記グループ）",
@@ -1048,7 +1141,8 @@
     "closedDay": "なし",
     "services": "完全貸切り型 家族葬会館",
     "id": 94,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/07/2023007miokuriteikaku-gaikan.jpg"
   },
   {
     "name": "七十七銀行宮町支店",
@@ -1059,7 +1153,8 @@
     "closedDay": "土曜・日曜・祝日・12月31日",
     "services": "銀行業",
     "id": 95,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-13.jpg"
   },
   {
     "name": "株式会社アイエック",
@@ -1070,7 +1165,8 @@
     "closedDay": "日曜・祝祭日",
     "services": "マンション・不動産管理",
     "id": 96,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/150708aiekku-tenpomae.jpg"
   },
   {
     "name": "特別養護老人ホームアルテイル宮町",
@@ -1081,7 +1177,8 @@
     "closedDay": "",
     "services": "高齢者の介護等（小規模多機能型居宅介護こめっと宮町を併設）",
     "id": 97,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2022/07/20220414gometto-miyamachi.jpg"
   },
   {
     "name": "(Check)コピーセンタータナカ",
@@ -1092,7 +1189,8 @@
     "closedDay": "日曜日",
     "services": "ちらし印刷、特急名刺、金文字製本",
     "id": 98,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/05/180521kopi-senta-tanaka.jpg"
   },
   {
     "name": "Lumos(ルーモス）",
@@ -1103,7 +1201,8 @@
     "closedDay": "木・日・祝日",
     "services": "雑貨、古道具販売 他 イベントブースレンタル",
     "id": 99,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/06/190516rru-mosu1.jpg"
   },
   {
     "name": "（株）DEREK（デレク）",
@@ -1114,7 +1213,8 @@
     "closedDay": "木・日・祝日",
     "services": "内装事業全般、修繕工事全般、リフォーム＆リノベーション",
     "id": 100,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/06/190516dereku.jpg"
   },
   {
     "name": "株式会社 後藤",
@@ -1125,7 +1225,8 @@
     "closedDay": "土曜・日曜・祝日",
     "services": "時計卸、電池交換",
     "id": 101,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/02/20210205kabu-gotou.jpg"
   },
   {
     "name": "英丸（はなまる）建設",
@@ -1136,7 +1237,8 @@
     "closedDay": "日曜・祝日",
     "services": "各種改修工事、リフォーム工事、リノベーション工事",
     "id": 102,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/11/20241118hanabmaru-kensetu-gaikan.jpg"
   },
   {
     "name": "有限会社東亜不動産",
@@ -1147,7 +1249,8 @@
     "closedDay": "水曜日",
     "services": "不動産業",
     "id": 103,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/4toua-fudousan.jpg"
   },
   {
     "name": "郷右近工務店",
@@ -1158,7 +1261,8 @@
     "closedDay": "日曜日と祝日",
     "services": "新築住宅とリフォーム",
     "id": 104,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/goukon-koumuten.jpg"
   },
   {
     "name": "キッズガーデン グランママ保育園",
@@ -1169,7 +1273,8 @@
     "closedDay": "日曜・祭日",
     "services": "保育園",
     "id": 105,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/15guranmama.jpg"
   },
   {
     "name": "花京院地域包括支援センター",
@@ -1180,7 +1285,8 @@
     "closedDay": "土・日・祝日",
     "services": "地域包括支援センター",
     "id": 106,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/12kakyouin-houkatu-senta-.jpg"
   },
   {
     "name": "仙台北警察署宮町交番",
@@ -1191,7 +1297,8 @@
     "closedDay": "",
     "services": "交番",
     "id": 107,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/17miyamchi-kouban.jpg"
   },
   {
     "name": "仙台上杉四郵便局",
@@ -1202,7 +1309,8 @@
     "closedDay": "土・日・祝日",
     "services": "郵便局",
     "id": 108,
-    "area": "上杉"
+    "area": "上杉",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/17kamisugi-yubinkyoku.jpg"
   },
   {
     "name": "仙台中江郵便局",
@@ -1213,7 +1321,8 @@
     "closedDay": "土・日・祝日",
     "services": "郵便局",
     "id": 109,
-    "area": "中江"
+    "area": "中江",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/18nakae-yubinkyoku.jpg"
   },
   {
     "name": "仙台福沢市民センター",
@@ -1224,7 +1333,8 @@
     "closedDay": "月曜日",
     "services": "市民センター",
     "id": 110,
-    "area": "福沢町"
+    "area": "福沢町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/18fukuzawa-senta-.jpg"
   },
   {
     "name": "仙台小松島郵便局",
@@ -1235,7 +1345,8 @@
     "closedDay": "土・日・祝日",
     "services": "郵便局",
     "id": 111,
-    "area": "小松島"
+    "area": "小松島",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/18komatushima-yuubinkyoku.jpg"
   },
   {
     "name": "東六コミュニティセンター",
@@ -1246,7 +1357,8 @@
     "closedDay": "12/28-1/5、5/3-5/5、8/3-8/8、8/13-8/16",
     "services": "コミュニティセンター",
     "id": 112,
-    "area": "その他"
+    "area": "その他",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/22touroku-komyumiteli.jpg"
   },
   {
     "name": "株式会社保坂",
@@ -1257,7 +1369,8 @@
     "closedDay": "日曜日",
     "services": "燃料店",
     "id": 113,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/24hosaka.jpg"
   },
   {
     "name": "東六番丁児童館",
@@ -1268,7 +1381,8 @@
     "closedDay": "日曜日・祝祭日",
     "services": "児童館",
     "id": 114,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/09/20240820touroku-jidoukan2.jpg"
   },
   {
     "name": "北日本映画株式会社",
@@ -1279,7 +1393,8 @@
     "closedDay": "不定休",
     "services": "不動産・ビル賃貸業",
     "id": 115,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/170427kitanihoneiga.jpg"
   },
   {
     "name": "葬祭会館 セレモール小田原",
@@ -1290,7 +1405,8 @@
     "closedDay": "なし",
     "services": "葬儀葬祭の施行・回忌法要の施行",
     "id": 116,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/05/Kinowaodawara.jpg"
   },
   {
     "name": "（株）総合エステート",
@@ -1301,7 +1417,8 @@
     "closedDay": "不定休",
     "services": "不動産業",
     "id": 117,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/10sougou-esute-to.jpg"
   },
   {
     "name": "アクアコインランドリー",
@@ -1312,7 +1429,8 @@
     "closedDay": "なし",
     "services": "コインランドリー",
     "id": 118,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/26akua.jpg"
   },
   {
     "name": "医療法人社団ヨシノデンタルクリニック",
@@ -1323,7 +1441,8 @@
     "closedDay": "日曜日・祝日・水曜日",
     "services": "歯科医院",
     "id": 119,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/26yosino-tendaru.jpg"
   },
   {
     "name": "草刈内科医院",
@@ -1334,7 +1453,8 @@
     "closedDay": "日祭日",
     "services": "内科医院・入院設備有り",
     "id": 120,
-    "area": "東照宮"
+    "area": "東照宮",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/P1010310.jpg"
   },
   {
     "name": "北六番丁針灸整骨院",
@@ -1345,7 +1465,8 @@
     "closedDay": "日曜",
     "services": "整骨院",
     "id": 121,
-    "area": "梅田町"
+    "area": "梅田町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/12/20211211kitarokubanchou-harikyu-seikotuin-1.jpg"
   },
   {
     "name": "山本眼科医院",
@@ -1356,7 +1477,8 @@
     "closedDay": "木曜・日曜・祝日",
     "services": "眼科医院",
     "id": 122,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/12/171218yamamoto-ganka.jpg"
   },
   {
     "name": "スポーツクラブ ルネサンス 仙台宮町24",
@@ -1367,7 +1489,8 @@
     "closedDay": "毎週火曜日、年末年始他",
     "services": "スポーツジム",
     "id": 123,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/03/20210311runesansu.jpeg"
   },
   {
     "name": "CureBody・やすらぎ整骨院",
@@ -1378,7 +1501,8 @@
     "closedDay": "日曜・祝日",
     "services": "ダイエット＆ボディメイク＆セルライト除去専門店、美容整体（完全予約制）",
     "id": 124,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/04/20200403yasuragi-cure-body1-1.jpg"
   },
   {
     "name": "美容室シローの店宮町店",
@@ -1389,7 +1513,8 @@
     "closedDay": "月曜日、第２日曜日",
     "services": "美容業、貸衣装、着付け",
     "id": 125,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop2.jpg"
   },
   {
     "name": "散髪屋 ささげん",
@@ -1400,7 +1525,8 @@
     "closedDay": "毎週月曜日、第3日曜・月曜連休",
     "services": "理容室",
     "id": 126,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/6sasagen.jpg"
   },
   {
     "name": "カンノ薬局",
@@ -1411,7 +1537,8 @@
     "closedDay": "日曜・祝日",
     "services": "薬局、漢方薬、ハーブティー",
     "id": 127,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-16.jpg"
   },
   {
     "name": "trans hair shellstone",
@@ -1422,7 +1549,8 @@
     "closedDay": "月曜（不定期・火曜）",
     "services": "美容業",
     "id": 128,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/05/180512sherll-stone-1.jpg"
   },
   {
     "name": "宮町歯科医院",
@@ -1433,7 +1561,8 @@
     "closedDay": "水曜日",
     "services": "歯科医院",
     "id": 129,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/13miyamachisika.jpg"
   },
   {
     "name": "宮町通りクリニック",
@@ -1444,7 +1573,8 @@
     "closedDay": "日曜・祝日",
     "services": "内科・循環器科・呼吸器科・外科・心臓血管外科",
     "id": 130,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-17.jpg"
   },
   {
     "name": "宮町整形外科クリニック",
@@ -1455,7 +1585,8 @@
     "closedDay": "日曜・祝日",
     "services": "整形外科",
     "id": 131,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/11/191115miyamatiseikei.jpg"
   },
   {
     "name": "宮城第三薬局",
@@ -1466,7 +1597,8 @@
     "closedDay": "木曜日 日曜・祝日",
     "services": "薬局",
     "id": 132,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/120709miyagi-dai3yakkoku.jpg"
   },
   {
     "name": "イトオ テルミ― 癒香療術所",
@@ -1477,7 +1609,8 @@
     "closedDay": "完全予約制",
     "services": "温熱刺激療法",
     "id": 133,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/09/120118yuika-kanban-omote-300x217.jpg"
   },
   {
     "name": "心 HAIR・LABO",
@@ -1488,7 +1621,8 @@
     "closedDay": "月、第３日曜日",
     "services": "美容室",
     "id": 134,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2023/02/111023kokoro.jpg"
   },
   {
     "name": "ツルハドラック 小田原店",
@@ -1499,7 +1633,8 @@
     "closedDay": "元旦",
     "services": "薬、日用品、化粧品、食品、酒、野菜",
     "id": 135,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/09/20200901turyha-odawaraten.jpg"
   },
   {
     "name": "ツルハドラック 仙台宮町店",
@@ -1510,7 +1645,8 @@
     "closedDay": "元旦",
     "services": "薬、日用品、化粧品、食品、酒、野菜",
     "id": 136,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/09/20200902turuha-miyamatiten1.jpg"
   },
   {
     "name": "東照宮駅前皮ふ科クリニック",
@@ -1521,7 +1657,8 @@
     "closedDay": "木曜・第４土曜・日曜・祝祭日",
     "services": "皮膚科医院",
     "id": 137,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/25toushougu-hifuka.jpg"
   },
   {
     "name": "渋川内科医院",
@@ -1532,7 +1669,8 @@
     "closedDay": "日曜・祝日",
     "services": "内科医院",
     "id": 138,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/21sibukawa-naika.jpg"
   },
   {
     "name": "たいら歯科医院",
@@ -1543,7 +1681,8 @@
     "closedDay": "日曜・祝祭日",
     "services": "歯科医院",
     "id": 139,
-    "area": "中江"
+    "area": "中江",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/22taira-sika.jpg"
   },
   {
     "name": "小泉内科医院",
@@ -1554,7 +1693,8 @@
     "closedDay": "日曜・祝日 土曜午後",
     "services": "内科医院",
     "id": 140,
-    "area": "上杉"
+    "area": "上杉",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/21koizumi-naika.jpg"
   },
   {
     "name": "大内医院",
@@ -1565,7 +1705,8 @@
     "closedDay": "木曜・日曜・祝日",
     "services": "内科医院",
     "id": 141,
-    "area": "福沢町"
+    "area": "福沢町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/21ooutinaika.jpg"
   },
   {
     "name": "岡村歯科医院",
@@ -1576,7 +1717,8 @@
     "closedDay": "木曜日、祝日、第2・4・5日曜",
     "services": "歯科医院",
     "id": 142,
-    "area": "上杉"
+    "area": "上杉",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/26okamura-sika.jpg"
   },
   {
     "name": "ヘアーサロン バンブー",
@@ -1587,7 +1729,8 @@
     "closedDay": "月曜日 第三日曜日",
     "services": "理容室",
     "id": 143,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/12banbu-.jpg"
   },
   {
     "name": "アイメディカル仙台",
@@ -1598,7 +1741,8 @@
     "closedDay": "日曜・祝日",
     "services": "視力回復",
     "id": 144,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/16ai-medelikaru-sendai.jpg"
   },
   {
     "name": "宮町鍼灸整骨院",
@@ -1609,7 +1753,8 @@
     "closedDay": "なし",
     "services": "整骨・針灸",
     "id": 145,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/16miyamachi-harikyuu-seikotuin.jpg"
   },
   {
     "name": "サンスターサレーヌ フェイシャルサロン 宮町店",
@@ -1620,7 +1765,8 @@
     "closedDay": "日曜日",
     "services": "エステ",
     "id": 146,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/16sansuta-sare-nu.jpg"
   },
   {
     "name": "鬼怒川産婦人科",
@@ -1631,7 +1777,8 @@
     "closedDay": "日曜日",
     "services": "産科・婦人科・麻酔科・女性内科",
     "id": 147,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/17kinugawa-sanfujinka.jpg"
   },
   {
     "name": "Barber DUALBEAT",
@@ -1642,7 +1789,8 @@
     "closedDay": "月曜日・第3日曜日",
     "services": "理容室",
     "id": 148,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/5barber-dualbeat.jpg"
   },
   {
     "name": "遠藤外科医院",
@@ -1653,7 +1801,8 @@
     "closedDay": "日・祝日",
     "services": "外科, 整形外科, 皮膚科, 泌尿器科",
     "id": 149,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/18endou-geka.jpg"
   },
   {
     "name": "エルム歯科医院",
@@ -1664,7 +1813,8 @@
     "closedDay": "日曜・祝祭日",
     "services": "歯科医院",
     "id": 150,
-    "area": "小田原"
+    "area": "小田原",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/25erumu-sika.jpg"
   },
   {
     "name": "NSP 新美健",
@@ -1675,7 +1825,8 @@
     "closedDay": "日曜日",
     "services": "健康補助食品販売",
     "id": 151,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/8nsp-sinbiken.jpg"
   },
   {
     "name": "Salondecoiffure Millevie",
@@ -1686,7 +1837,8 @@
     "closedDay": "月曜日・第三日曜日",
     "services": "美容業 アクセサリー販売",
     "id": 152,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/160519mille.jpg"
   },
   {
     "name": "おなかの整体院 やんべ",
@@ -1697,7 +1849,8 @@
     "closedDay": "日曜・祝日",
     "services": "手技の施術による整体院",
     "id": 153,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/160720yanbe.jpg"
   },
   {
     "name": "Total Body Make Vary",
@@ -1708,7 +1861,8 @@
     "closedDay": "毎週月曜日 夏期年末年始等",
     "services": "パーソナルストレッチ・パーソナルトレーニング店",
     "id": 154,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/170502vary1.jpg"
   },
   {
     "name": "まゆ乳腺クリニック",
@@ -1719,7 +1873,8 @@
     "closedDay": "火曜日・日曜・祝日",
     "services": "乳腺外科",
     "id": 155,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/07/20210424mayu1.jpg"
   },
   {
     "name": "エステサロンのような床屋さん cotoco",
@@ -1730,7 +1885,8 @@
     "closedDay": "月曜日",
     "services": "理容室",
     "id": 156,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/02/20200129cotoco-tenpo-gazou.jpg"
   },
   {
     "name": "ヘアースタッフ",
@@ -1741,7 +1897,8 @@
     "closedDay": "毎週月曜日、第1火曜日、第3日曜日",
     "services": "美容室",
     "id": 157,
-    "area": "小松島"
+    "area": "小松島",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2020/02/20191227hea-sutaffu2.jpg"
   },
   {
     "name": "Gentiana(ゲンティアナ)",
@@ -1752,7 +1909,8 @@
     "closedDay": "不定休",
     "services": "ネイル（ジェル）・まつ毛エクステ・まつ毛パーマ",
     "id": 158,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/03/20210308gen-hp1.jpeg"
   },
   {
     "name": "hair kulolo",
@@ -1763,7 +1921,8 @@
     "closedDay": "火曜日",
     "services": "カット・カラー・トリートメント等の美容業務 ヘアケア商品の販売",
     "id": 159,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/05/20210401suzuken-kuroro-1.jpg"
   },
   {
     "name": "宮町理粧",
@@ -1774,7 +1933,8 @@
     "closedDay": "月曜・第３日曜日",
     "services": "理・美容",
     "id": 160,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/10miyamachi-rishou.jpg"
   },
   {
     "name": "おひさま整体",
@@ -1785,7 +1945,8 @@
     "closedDay": "土・日・祝日",
     "services": "整体院（肩こり・腰痛などオールハンド施術）",
     "id": 161,
-    "area": "花京院"
+    "area": "花京院",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/12/20211205ohisama1-1.jpg"
   },
   {
     "name": "かわむらこどもクリニック",
@@ -1796,7 +1957,8 @@
     "closedDay": "木曜日",
     "services": "小児科",
     "id": 162,
-    "area": "高松"
+    "area": "高松",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/18kawanmura-kodomo-korinikku.jpg"
   },
   {
     "name": "HAIR&BEAUTY 理粧",
@@ -1807,7 +1969,8 @@
     "closedDay": "月曜日 第３火曜日",
     "services": "美容室",
     "id": 163,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/10/20210921rishyou.jpg"
   },
   {
     "name": "セントジェームズ",
@@ -1818,7 +1981,8 @@
     "closedDay": "月曜日",
     "services": "理容室、レディースシェービング、ヘッドスパ",
     "id": 164,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-18.jpg"
   },
   {
     "name": "エステサロンのような床屋さん COTOCO",
@@ -1829,7 +1993,8 @@
     "closedDay": "毎週月曜日 火曜不定休",
     "services": "理容室",
     "id": 165,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/09/20240914cotoco-gaikan-1.jpg"
   },
   {
     "name": "渡辺美容室",
@@ -1840,7 +2005,8 @@
     "closedDay": "火曜日,第2・第4水曜日",
     "services": "美容業・着付け",
     "id": 166,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2019/02/190211watanabe-biyousitu-gaikan.jpg"
   },
   {
     "name": "音の里ミュージック（ラビットピアノ教室）",
@@ -1851,7 +2017,8 @@
     "closedDay": "不定休",
     "services": "音楽教室、ピアノ・リトミック、ソルフェージュ",
     "id": 167,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/170510rabitto.jpg"
   },
   {
     "name": "Sendai Art Craft Salon",
@@ -1862,7 +2029,8 @@
     "closedDay": "不定休",
     "services": "カルチャースクール 仙台七夕和紙アートなど",
     "id": 168,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/07/20230920sendai-a-to.jpg"
   },
   {
     "name": "仙台ジャズスクール／安田ミュージックオフィス",
@@ -1873,7 +2041,8 @@
     "closedDay": "なし",
     "services": "音楽教室・演奏",
     "id": 169,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/07/20210321yasuda.jpg"
   },
   {
     "name": "東洋国際文化アカデミー",
@@ -1884,7 +2053,8 @@
     "closedDay": "土・日・祝日",
     "services": "学校法人",
     "id": 170,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2018/05/f253405b0deb98148d5cf44f05b01d07.jpg"
   },
   {
     "name": "スクールＩＥ仙台宮町校",
@@ -1895,7 +2065,8 @@
     "closedDay": "日曜日・祝日",
     "services": "個別指導学習塾",
     "id": 171,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/130701suku-ru-ie.jpg"
   },
   {
     "name": "KUMON（公文）トライアンフ 宮町教室",
@@ -1906,7 +2077,8 @@
     "closedDay": "月木以外",
     "services": "学習塾",
     "id": 172,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/kumon.jpg"
   },
   {
     "name": "仙台高速編物学院",
@@ -1917,7 +2089,8 @@
     "closedDay": "不定休",
     "services": "編み物教室",
     "id": 173,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/13kousoku-amimono.jpg"
   },
   {
     "name": "明光義塾 仙台東照宮教室",
@@ -1928,7 +2101,8 @@
     "closedDay": "日曜日",
     "services": "学習塾",
     "id": 174,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2021/05/20210508meikou-gaikan-1.jpg"
   },
   {
     "name": "キャッスル英会話",
@@ -1939,7 +2113,8 @@
     "closedDay": "土・日・祝日",
     "services": "電話 022-796-5014 英会話教室・学童",
     "id": 175,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2024/09/20240920kyassuru-eigawa-gaikan1-1.jpg"
   },
   {
     "name": "城南コベッツ 仙台宮町教室",
@@ -1950,7 +2125,8 @@
     "closedDay": "日曜祝日",
     "services": "個別指導学習塾",
     "id": 176,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-1-5.jpg"
   },
   {
     "name": "株式会社VOICE",
@@ -1961,7 +2137,8 @@
     "closedDay": "土曜日・日曜日・祝日",
     "services": "SNS運用代行、動画編集・撮影",
     "id": 177,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2025/10/20251008voice1-1.jpg"
   },
   {
     "name": "藤野写真美術院",
@@ -1972,7 +2149,8 @@
     "closedDay": "日曜日（予約のみ受付）",
     "services": "写真撮影",
     "id": 178,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/141213fujinoshasin-bijyutuin.jpg"
   },
   {
     "name": "中野釣具店",
@@ -1983,7 +2161,8 @@
     "closedDay": "無し",
     "services": "釣具小売業",
     "id": 179,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/shop-20.jpg"
   },
   {
     "name": "サイクルショップ庄司",
@@ -1994,7 +2173,8 @@
     "closedDay": "日曜日",
     "services": "自転車販売・修理",
     "id": 180,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/5saikuru-shouji.jpg"
   },
   {
     "name": "アッドシステム株式会社",
@@ -2005,7 +2185,8 @@
     "closedDay": "土・日・祝日",
     "services": "通信用機械 事務用機械器具販売",
     "id": 181,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/19addo-sisutemu.jpg"
   },
   {
     "name": "有限会社阿部板金",
@@ -2016,7 +2197,8 @@
     "closedDay": "日曜日",
     "services": "板金業",
     "id": 182,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/19abe-bankin.jpg"
   },
   {
     "name": "ワークショップ＆ギャラリー 小西屋",
@@ -2027,6 +2209,7 @@
     "closedDay": "土,日、祝日（月末土曜日は営業）",
     "services": "手づくり作品の展示、販売、講習",
     "id": 183,
-    "area": "宮町"
+    "area": "宮町",
+    "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/150902konisiya.jpg"
   }
 ]
