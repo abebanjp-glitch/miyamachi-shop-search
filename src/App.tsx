@@ -111,11 +111,13 @@ const AnimatedTitle = () => {
       animate="visible"
       className="text-[14px] min-[360px]:text-[16px] min-[390px]:text-[18px] sm:text-xl md:text-2.5xl font-serif font-normal tracking-[0.12em] text-brand-charcoal leading-tight mb-4 whitespace-nowrap flex justify-center flex-wrap"
     >
+      <span className="sr-only">宮町商店街 店舗検索｜仙台市青葉区宮町の183店舗をさがす</span>
       {characters.map((char, index) => (
         <motion.span
           key={index}
           variants={childVariants}
           className="inline-block"
+          aria-hidden="true"
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
@@ -449,6 +451,9 @@ export default function App() {
         
         {/* Search UI directly under Hero */}
         <section className="max-w-3xl mx-auto px-4 mb-16" id="search-section">
+          <h2 className="text-center text-sm sm:text-base font-serif font-semibold tracking-[0.15em] text-brand-charcoal/80 mb-6">
+            店舗を検索する
+          </h2>
           <SearchFilters
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
@@ -481,6 +486,7 @@ export default function App() {
 
         {/* Results / Grid Area */}
         <section className="max-w-6xl mx-auto px-4" id="results-section">
+          <h2 className="sr-only">宮町商店街 店舗検索結果一覧</h2>
           
           {/* Active Filters Display */}
           {(selectedCategories.length > 0 || selectedAreas.length > 0 || searchQuery) && (
