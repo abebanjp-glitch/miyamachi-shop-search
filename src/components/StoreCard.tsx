@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, Phone, Clock, Calendar, ShoppingBag, ExternalLink, Camera, Upload, X, Link, Trash2 } from 'lucide-react';
+import { MapPin, Phone, Clock, Calendar, ShoppingBag, ExternalLink, Camera, Upload, X, Link, Trash2, Navigation } from 'lucide-react';
 import { Store } from '../types';
 import { getCategoryColor } from '../data/constants';
 
@@ -9,6 +9,8 @@ interface StoreCardProps {
   searchQuery: string;
   customImage?: string;
   onUpdateImage?: (imageUrl: string) => void;
+  onSelectCategory?: (category: string) => void;
+  onSelectArea?: (area: string) => void;
 }
 
 // Utility to escape regex special characters
@@ -206,9 +208,10 @@ export const getStoreImageUrl = (store: Store, customImage?: string) => {
   return list[index];
 };
 
-export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, customImage, onUpdateImage }) => {
+export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, customImage, onUpdateImage, onSelectCategory, onSelectArea }) => {
   const catColor = getCategoryColor(store.category);
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.address + ' ' + store.name)}`;
+  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(store.address + ' ' + store.name)}`;
 
   // Photo editing states
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -320,12 +323,20 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
       {/* Header section with category badge & area badge */}
       <div className="p-6 pb-4 border-b border-black/[0.03] flex-1 relative">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-          <span className="text-[10px] font-semibold text-brand-green tracking-[0.15em] uppercase">
+          <button
+            onClick={() => onSelectCategory?.(store.category)}
+            className="text-[10px] font-semibold text-brand-green tracking-[0.15em] uppercase hover:underline cursor-pointer py-2 -my-2 text-left"
+            title={`「${store.category}」で絞り込む`}
+          >
             {store.category}
-          </span>
-          <span className="text-[10px] font-bold text-brand-gold tracking-[0.05em] px-2 py-0.5 border border-brand-gold/20 rounded-[2px] bg-brand-gold-light/40">
+          </button>
+          <button
+            onClick={() => onSelectArea?.(store.area)}
+            className="text-[10px] font-bold text-brand-gold tracking-[0.05em] px-2 py-1.5 -my-1 border border-brand-gold/20 rounded-[2px] bg-brand-gold-light/40 hover:bg-brand-gold-light cursor-pointer text-left"
+            title={`「${store.area}」で絞り込む`}
+          >
             {store.area}
-          </span>
+          </button>
         </div>
 
         <h3 className="text-base sm:text-lg font-serif font-semibold text-brand-charcoal leading-snug hover:text-brand-green transition-colors tracking-wide">
@@ -340,16 +351,16 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
           <MapPin className="w-4 h-4 text-brand-green/75 mt-0.5 shrink-0" />
           <div className="flex-1 min-w-0">
             <span className="block text-[13px] leading-relaxed break-words">{store.address}</span>
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1 text-[12px] sm:text-[11px] font-medium text-brand-gold hover:text-brand-gold-hover transition-colors mt-1 hover:underline py-3 -my-2"
-              id={`maps-link-${store.id}`}
-            >
-              <span>位置を確認する</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
+            <div className="flex gap-2 mt-2.5">
+              <a href={mapsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1.5 flex-1 py-2.5 text-[12px] font-semibold text-brand-green border border-brand-green/30 rounded-[2px] hover:bg-brand-green hover:text-white transition-all cursor-pointer" id={`maps-link-${store.id}`}>
+                <MapPin className="w-3.5 h-3.5" />
+                <span>地図で見る</span>
+              </a>
+              <a href={directionsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1.5 flex-1 py-2.5 text-[12px] font-semibold text-white bg-brand-green hover:bg-brand-green-hover border border-brand-green rounded-[2px] transition-all cursor-pointer" id={`directions-link-${store.id}`}>
+                <Navigation className="w-3.5 h-3.5" />
+                <span>ルート案内</span>
+              </a>
+            </div>
           </div>
         </div>
 

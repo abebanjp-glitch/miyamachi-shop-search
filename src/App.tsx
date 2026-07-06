@@ -596,6 +596,14 @@ export default function App() {
                       searchQuery={searchQuery}
                       customImage={customImages[store.id]}
                       onUpdateImage={(url) => handleUpdateImage(store.id, url)}
+                      onSelectCategory={(cat) => {
+                        setSelectedCategories([cat]);
+                        document.getElementById('results-section')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      onSelectArea={(area) => {
+                        setSelectedAreas([area]);
+                        document.getElementById('results-section')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
                     />
                   ))}
                 </AnimatePresence>
