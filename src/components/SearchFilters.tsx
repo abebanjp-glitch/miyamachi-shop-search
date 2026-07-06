@@ -318,7 +318,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortKey)}
-              className="bg-transparent border-b border-gray-200 py-2.5 sm:py-1 px-1.5 font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none pr-4"
+              className="bg-transparent border-b border-gray-200 py-3.5 sm:py-1 px-1.5 font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none pr-4"
               id="sort-select-dropdown"
             >
               <option value="id">登録順（標準）</option>

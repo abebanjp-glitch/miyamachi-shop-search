@@ -344,7 +344,7 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
               href={mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 text-[12px] sm:text-[11px] font-medium text-brand-gold hover:text-brand-gold-hover transition-colors mt-1 hover:underline py-2 -my-1"
+              className="inline-flex items-center gap-1 text-[12px] sm:text-[11px] font-medium text-brand-gold hover:text-brand-gold-hover transition-colors mt-1 hover:underline py-3 -my-2"
               id={`maps-link-${store.id}`}
             >
               <span>位置を確認する</span>
@@ -360,7 +360,7 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
             {store.phone ? (
               <a
                 href={`tel:${store.phone.replace(/[^0-9-]/g, '')}`}
-                className="text-[13px] font-semibold text-brand-charcoal hover:text-brand-accent hover:underline transition-colors focus:outline-none"
+                className="inline-flex items-center py-3 -my-3 text-[13px] font-semibold text-brand-charcoal hover:text-brand-accent hover:underline transition-colors focus:outline-none"
                 id={`phone-link-${store.id}`}
               >
                 {store.phone}
