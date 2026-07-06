@@ -344,7 +344,7 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
               href={mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 text-[11px] font-medium text-brand-gold hover:text-brand-gold-hover transition-colors mt-1 hover:underline"
+              className="inline-flex items-center gap-1 text-[12px] sm:text-[11px] font-medium text-brand-gold hover:text-brand-gold-hover transition-colors mt-1 hover:underline py-2 -my-1"
               id={`maps-link-${store.id}`}
             >
               <span>位置を確認する</span>

@@ -79,7 +79,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
         <button
           type="button"
           onClick={() => handleTabChange('category-area')}
-          className={`flex-1 pb-4 text-center text-xs font-semibold tracking-[0.1em] transition-all flex items-center justify-center gap-2 cursor-pointer border-b-2 ${
+          className={`flex-1 pt-3 pb-4 text-center text-xs font-semibold tracking-[0.1em] transition-all flex items-center justify-center gap-2 cursor-pointer border-b-2 ${
             activeTab === 'category-area'
               ? 'border-brand-green text-brand-green font-bold'
               : 'border-transparent text-brand-charcoal/40 hover:text-brand-charcoal/80'
@@ -92,7 +92,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
         <button
           type="button"
           onClick={() => handleTabChange('keyword')}
-          className={`flex-1 pb-4 text-center text-xs font-semibold tracking-[0.1em] transition-all flex items-center justify-center gap-2 cursor-pointer border-b-2 ${
+          className={`flex-1 pt-3 pb-4 text-center text-xs font-semibold tracking-[0.1em] transition-all flex items-center justify-center gap-2 cursor-pointer border-b-2 ${
             activeTab === 'keyword'
               ? 'border-brand-green text-brand-green font-bold'
               : 'border-transparent text-brand-charcoal/40 hover:text-brand-charcoal/80'
@@ -123,7 +123,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                       const val = e.target.value;
                       setSelectedCategories(val ? [val] : []);
                     }}
-                    className="w-full bg-transparent border-b border-gray-200 text-sm py-2 px-1 text-brand-charcoal font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none"
+                    className="w-full bg-transparent border-b border-gray-200 text-base sm:text-sm py-3 sm:py-2 px-1 text-brand-charcoal font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none"
                     id="category-dropdown-select"
                   >
                     <option value="" className="text-brand-charcoal/60">すべての業種から選択</option>
@@ -152,7 +152,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                       const val = e.target.value;
                       setSelectedAreas(val ? [val] : []);
                     }}
-                    className="w-full bg-transparent border-b border-gray-200 text-sm py-2 px-1 text-brand-charcoal font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none"
+                    className="w-full bg-transparent border-b border-gray-200 text-base sm:text-sm py-3 sm:py-2 px-1 text-brand-charcoal font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none"
                     id="area-dropdown-select"
                   >
                     <option value="" className="text-brand-charcoal/60">すべてのエリアから選択</option>
@@ -195,7 +195,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                       key={category}
                       type="button"
                       onClick={() => toggleCategory(category)}
-                      className={`text-xs px-3 py-1.5 rounded-full border transition-all duration-200 cursor-pointer flex items-center gap-1 ${
+                      className={`text-[13px] sm:text-xs px-3.5 sm:px-3 py-2.5 sm:py-1.5 rounded-full border transition-all duration-200 cursor-pointer flex items-center gap-1 ${
                         isSelected
                           ? 'bg-brand-green text-white border-brand-green font-medium'
                           : 'bg-white hover:bg-gray-50 text-brand-charcoal/80 border-gray-200'
@@ -238,7 +238,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                       key={area}
                       type="button"
                       onClick={() => toggleArea(area)}
-                      className={`text-xs px-3 py-1.5 rounded-full border transition-all duration-200 cursor-pointer flex items-center gap-1 ${
+                      className={`text-[13px] sm:text-xs px-3.5 sm:px-3 py-2.5 sm:py-1.5 rounded-full border transition-all duration-200 cursor-pointer flex items-center gap-1 ${
                         isSelected
                           ? 'bg-brand-green text-white border-brand-green font-medium'
                           : 'bg-white hover:bg-gray-50 text-brand-charcoal/80 border-gray-200'
@@ -266,7 +266,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                 <input
                   id="keyword-search"
                   type="text"
-                  className="w-full bg-transparent border-b border-gray-200 py-2.5 pl-8 pr-8 text-sm text-brand-charcoal placeholder-brand-charcoal/30 focus:border-brand-green focus:outline-none rounded-none transition-all"
+                  className="w-full bg-transparent border-b border-gray-200 py-3 sm:py-2.5 pl-8 pr-8 text-base sm:text-sm text-brand-charcoal placeholder-brand-charcoal/30 focus:border-brand-green focus:outline-none rounded-none transition-all"
                   placeholder="店名、取扱商品、サービス内容、住所など..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -299,7 +299,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                     key={word}
                     type="button"
                     onClick={() => setSearchQuery(word)}
-                    className="text-xs px-2.5 py-1 rounded-[2px] bg-gray-50 hover:bg-brand-green-light hover:text-brand-green text-brand-charcoal/70 transition-all cursor-pointer border border-gray-200/40"
+                    className="text-[13px] sm:text-xs px-3 sm:px-2.5 py-2.5 sm:py-1 rounded-[2px] bg-gray-50 hover:bg-brand-green-light hover:text-brand-green text-brand-charcoal/70 transition-all cursor-pointer border border-gray-200/40"
                     id={`suggested-tag-${word}`}
                   >
                     #{word}
@@ -318,7 +318,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortKey)}
-              className="bg-transparent border-b border-gray-200 py-1 px-1.5 font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none pr-4"
+              className="bg-transparent border-b border-gray-200 py-2.5 sm:py-1 px-1.5 font-medium focus:border-brand-green focus:outline-none cursor-pointer rounded-none appearance-none pr-4"
               id="sort-select-dropdown"
             >
               <option value="id">登録順（標準）</option>

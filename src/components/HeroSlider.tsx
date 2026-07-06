@@ -130,17 +130,17 @@ export const HeroSlider: React.FC = () => {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2.5" id="slider-pagination">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30 flex" id="slider-pagination">
         {SLIDES.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'w-8 bg-white' : 'w-1.5 bg-white/40 hover:bg-white/70'
-            }`}
+            className="flex h-11 min-w-11 items-center justify-center cursor-pointer group/dot"
             aria-label={`スライド ${index + 1} を表示`}
             id={`slider-dot-${index}`}
-          />
+          >
+            <span className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex ? 'w-8 bg-white' : 'w-1.5 bg-white/40 group-hover/dot:bg-white/70'}`} />
+          </button>
         ))}
       </div>
     </div>

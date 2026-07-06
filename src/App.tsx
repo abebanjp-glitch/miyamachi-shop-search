@@ -329,14 +329,14 @@ export default function App() {
       <div className="h-1 bg-brand-green w-full flex-none" />
 
       {/* Hero Banner Header */}
-      <header className="bg-brand-base py-10 sm:py-14 px-4 relative overflow-hidden border-b border-b-black/[0.04]" id="page-header">
+      <header className="bg-brand-base py-6 sm:py-14 px-4 relative overflow-hidden border-b border-b-black/[0.04]" id="page-header">
         <HeroBackgroundPattern />
 
         {/* Subtle, elegant BGM Toggle Button */}
         <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-30 flex items-center" id="bgm-control-container">
           <button
             onClick={() => setBgmOn((prev) => !prev)}
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-white/80 hover:bg-white backdrop-blur-md border border-black/[0.06] shadow-xs transition-all duration-300 group cursor-pointer"
+            className="w-11 h-11 rounded-full flex items-center justify-center bg-white/80 hover:bg-white backdrop-blur-md border border-black/[0.06] shadow-xs transition-all duration-300 group cursor-pointer"
             title={bgmOn ? "BGMをミュート" : "BGMを再生（お宮町の風情）"}
             aria-label="BGMを切り替え"
             id="bgm-toggle-btn"
@@ -351,6 +351,9 @@ export default function App() {
         
         <div className="max-w-[1500px] mx-auto text-center relative z-10 flex flex-col items-center">
           {/* Main Title */}
+          <p className="text-[11px] sm:text-xs tracking-[0.25em] text-brand-green font-semibold mb-3 border border-brand-green/25 rounded-full px-4 py-1.5 bg-white/60">
+            仙台・宮町商店街｜店舗検索サイト
+          </p>
           <AnimatedTitle />
           
           {/* Poetic description */}
@@ -439,7 +442,7 @@ export default function App() {
             </a>
 
             {/* Hero Slider with 16:9 Aspect Ratio */}
-            <div className="w-full mt-8 mb-4 sm:mt-12 sm:mb-6 flex justify-center">
+            <div className="w-full mt-6 mb-2 sm:mt-12 sm:mb-6 flex justify-center">
               <HeroSlider />
             </div>
           </div>
