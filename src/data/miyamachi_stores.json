@@ -2110,8 +2110,8 @@
     "address": "仙台市青葉区宮町3-6-12",
     "phone": "022-222-2636",
     "hours": "AM9:00-PM5:00",
-    "closedDay": "日曜日",
-    "services": "板金業",
+    "closedDay": "土・日・祝日",
+    "services": "厨房機器・ステンレス建築金物製造販売",
     "id": 175,
     "area": "宮町",
     "officialImage": "https://www.omiyamachi.com/public/wp-content/uploads/2017/10/19abe-bankin.jpg"

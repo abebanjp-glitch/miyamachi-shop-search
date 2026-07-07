@@ -67,7 +67,28 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
   };
 
   const activeFilterCount = selectedCategories.length + selectedAreas.length + (searchQuery ? 1 : 0);
-  const suggestedKeywords = ['和菓子', 'カフェ', 'ケーキ', 'ラーメン', 'メガネ', 'カレー', '生花店', '居酒屋'];
+  const suggestedKeywordGroups = [
+    {
+      groupName: 'グルメ・お食事',
+      keywords: ['居酒屋', 'ラーメン', '焼肉', '弁当', 'カフェ', '和菓子'],
+    },
+    {
+      groupName: 'お買い物・暮らし',
+      keywords: ['食料品', 'スーパー', '生花', '郵便局', '不動産', '自転車'],
+    },
+    {
+      groupName: '美容・健康・医療',
+      keywords: ['美容', '理容室', '薬局', '医院', '歯科', '整骨院'],
+    },
+  ];
+
+  const handleKeywordClick = (word: string) => {
+    if (searchQuery === word) {
+      setSearchQuery('');
+    } else {
+      setSearchQuery(word);
+    }
+  };
 
   return (
     <div 
@@ -290,21 +311,37 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
             </div>
 
             {/* Suggested Tags */}
-            <div className="space-y-2 pt-2">
-              <span className="text-[10px] font-semibold text-brand-charcoal/40 tracking-[0.05em] block">
+            <div className="space-y-4 pt-3">
+              <span className="text-[10px] font-semibold text-brand-charcoal/40 tracking-[0.05em] block uppercase">
                 おすすめキーワード
               </span>
-              <div className="flex flex-wrap gap-1.5">
-                {suggestedKeywords.map((word) => (
-                  <button
-                    key={word}
-                    type="button"
-                    onClick={() => setSearchQuery(word)}
-                    className="text-[13px] sm:text-xs px-3 sm:px-2.5 py-2.5 sm:py-1 rounded-[2px] bg-gray-50 hover:bg-brand-green-light hover:text-brand-green text-brand-charcoal/70 transition-all cursor-pointer border border-gray-200/40"
-                    id={`suggested-tag-${word}`}
-                  >
-                    #{word}
-                  </button>
+              <div className="space-y-4">
+                {suggestedKeywordGroups.map((group) => (
+                  <div key={group.groupName} className="space-y-1.5" id={`keyword-group-${group.groupName}`}>
+                    <span className="text-[10px] font-semibold text-brand-charcoal/50 block">
+                      {group.groupName}
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {group.keywords.map((word) => {
+                        const isSelected = searchQuery === word;
+                        return (
+                          <button
+                            key={word}
+                            type="button"
+                            onClick={() => handleKeywordClick(word)}
+                            className={`text-[13px] sm:text-xs px-3 sm:px-2.5 py-2 sm:py-1 rounded-[2px] transition-all cursor-pointer border ${
+                              isSelected
+                                ? 'bg-brand-green text-white border-brand-green font-medium shadow-xs'
+                                : 'bg-gray-50/50 hover:bg-brand-green-light hover:text-brand-green text-brand-charcoal/70 border-gray-200/40'
+                            }`}
+                            id={`suggested-tag-${word}`}
+                          >
+                            #{word}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
