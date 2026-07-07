@@ -74,7 +74,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
     },
     {
       groupName: 'お買い物・暮らし',
-      keywords: ['食料品', 'スーパー', '生花', '郵便局', '不動産', '自転車'],
+      keywords: ['食料品', 'スーパー', 'コンビニ', '生花', '郵便局', '不動産', '自転車'],
     },
     {
       groupName: '美容・健康・医療',
