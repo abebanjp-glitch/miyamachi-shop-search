@@ -296,9 +296,16 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
       <div className="relative aspect-video w-full sm:h-auto sm:aspect-video sm:w-[70%] sm:mx-auto sm:mt-5 sm:rounded-[2px] overflow-hidden bg-gray-100 flex-none group">
         <img
           src={getStoreImageUrl(store, customImage)}
+          alt=""
+          aria-hidden="true"
+          referrerPolicy="no-referrer"
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-50 pointer-events-none"
+        />
+        <img
+          src={getStoreImageUrl(store, customImage)}
           alt={store.name}
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
         
