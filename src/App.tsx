@@ -111,7 +111,7 @@ const AnimatedTitle = () => {
       animate="visible"
       className="text-[14px] min-[360px]:text-[16px] min-[390px]:text-[18px] sm:text-xl md:text-2.5xl font-serif font-normal tracking-[0.12em] text-brand-charcoal leading-tight mb-4 whitespace-nowrap flex justify-center flex-wrap"
     >
-      <span className="sr-only">宮町商店街 店舗検索｜仙台市青葉区宮町の183店舗をさがす</span>
+      <span className="sr-only">宮町商店街 店舗検索｜仙台市青葉区宮町の176店舗をさがす</span>
       {characters.map((char, index) => (
         <motion.span
           key={index}
@@ -362,7 +362,7 @@ export default function App() {
             <br />
             四百年、この道は誰かの行きつけでした。
             <br />
-            次はあなたのお店を。——全183店舗から、さがす。
+            次はあなたのお店を。——全176店舗から、さがす。
           </p>
           {/* Logo Combo */}
           <div className="flex flex-col items-center gap-4 w-full" id="logo-container">

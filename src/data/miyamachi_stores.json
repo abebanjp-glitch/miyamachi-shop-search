@@ -1378,7 +1378,7 @@
     "address": "仙台市青葉区宮町4-4-12",
     "phone": "022-714-1021",
     "hours": "平日AM9:00-PM6:00 土曜日AM9:00-PM5:00",
-    "closedDay": "",
+    "closedDay": "日曜日・祝祭日",
     "services": "児童館",
     "id": 114,
     "area": "宮町",
