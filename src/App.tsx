@@ -1,11 +1,11 @@
-import { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Store, SortKey } from './types';
 import storesData from './data/miyamachi_stores.json';
 import { CATEGORIES, AREAS } from './data/constants';
 import { StoreCard } from './components/StoreCard';
 import { SearchFilters } from './components/SearchFilters';
-import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX, Star } from 'lucide-react';
+import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX, Star, Lock, Unlock } from 'lucide-react';
 import { HeroSlider } from './components/HeroSlider';
 import { playBGM, pauseBGM } from './utils/audio';
 
@@ -243,6 +243,44 @@ export default function App() {
       return next;
     });
   };
+
+  // Admin Mode states with LocalStorage persistence
+  const [isAdmin, setIsAdmin] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('miyamachi_admin_mode') === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [isAdminModalOpen, setIsAdminModalOpen] = useState<boolean>(false);
+  const [adminPasswordInput, setAdminPasswordInput] = useState<string>('');
+  const [passwordError, setPasswordError] = useState<string>('');
+
+  const handleAdminLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (adminPasswordInput === 'miyamachi') {
+      setIsAdmin(true);
+      try {
+        localStorage.setItem('miyamachi_admin_mode', 'true');
+      } catch (err) {
+        console.error('Failed to save admin state:', err);
+      }
+      setIsAdminModalOpen(false);
+      setAdminPasswordInput('');
+      setPasswordError('');
+    } else {
+      setPasswordError('パスワードが正しくありません。');
+    }
+  };
+
+  const handleAdminLogout = () => {
+    setIsAdmin(false);
+    try {
+      localStorage.setItem('miyamachi_admin_mode', 'false');
+    } catch (err) {
+      console.error('Failed to clear admin state:', err);
+    }
+  };
   
   // Pagination State
   const [visibleCount, setVisibleCount] = useState<number>(ITEMS_PER_PAGE);
@@ -384,6 +422,24 @@ export default function App() {
     <div className="min-h-screen flex flex-col font-sans bg-brand-base" id="app-root">
       {/* Top Accent Line */}
       <div className="h-1 bg-brand-green w-full flex-none" />
+
+      {/* Admin Mode Top Banner */}
+      {isAdmin && (
+        <div className="bg-amber-500 text-white py-2.5 px-4 text-xs font-medium flex items-center justify-center gap-4 shadow-sm z-40 relative border-b border-black/10" id="admin-banner">
+          <span className="flex items-center gap-1.5 font-bold">
+            <span className="w-2 h-2 rounded-full bg-white animate-ping inline-block" />
+            <span>管理者モード有効中（各店舗の写真を変更できます）</span>
+          </span>
+          <button
+            type="button"
+            onClick={handleAdminLogout}
+            className="bg-white/15 hover:bg-white/25 active:bg-white/35 text-white px-3 py-1 rounded-[2px] border border-white/20 font-semibold cursor-pointer transition-colors text-[11px]"
+            id="admin-logout-btn"
+          >
+            ログアウト
+          </button>
+        </div>
+      )}
 
       {/* Hero Banner Header */}
       <header className="bg-brand-base py-6 sm:py-14 px-4 relative overflow-hidden border-b border-b-black/[0.04]" id="page-header">
@@ -679,7 +735,7 @@ export default function App() {
             /* Stores Grid Section - Luxurious 3-Column Grid */
             <div className="space-y-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="stores-cards-grid">
-                <AnimatePresence mode="popLayout">
+                <AnimatePresence>
                   {visibleStores.map((store) => (
                     <StoreCard
                       key={store.id}
@@ -689,6 +745,7 @@ export default function App() {
                       onToggleFavorite={handleToggleFavorite}
                       customImage={customImages[store.id]}
                       onUpdateImage={(url) => handleUpdateImage(store.id, url)}
+                      isAdmin={isAdmin}
                       onSelectCategory={(cat) => {
                         setSelectedCategories([cat]);
                         document.getElementById('results-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -767,8 +824,31 @@ export default function App() {
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </li>
-                <li className="text-gray-500 text-[10px] leading-relaxed pt-2 border-t border-gray-800/50">
-                  本アプリは検索機能向上のための独立した店舗検索ページとして動作しています。
+                <li className="pt-2 border-t border-gray-800/50 flex flex-col gap-1.5">
+                  <span className="text-gray-500 text-[10px] leading-relaxed">
+                    本アプリは検索機能向上のための独立した店舗検索ページとして動作しています。
+                  </span>
+                  {!isAdmin ? (
+                    <button
+                      type="button"
+                      onClick={() => setIsAdminModalOpen(true)}
+                      className="text-gray-400 hover:text-brand-gold transition-colors text-[11px] font-semibold flex items-center gap-1.5 cursor-pointer mt-1 self-start focus:outline-none"
+                      id="admin-login-trigger"
+                    >
+                      <Lock className="w-3.5 h-3.5" />
+                      <span>管理者ログイン</span>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={handleAdminLogout}
+                      className="text-brand-green hover:text-brand-green-hover transition-colors text-[11px] font-semibold flex items-center gap-1.5 cursor-pointer mt-1 self-start focus:outline-none"
+                      id="admin-logout-trigger"
+                    >
+                      <Unlock className="w-3.5 h-3.5" />
+                      <span>管理者ログアウト</span>
+                    </button>
+                  )}
                 </li>
               </ul>
             </div>
@@ -780,6 +860,90 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Admin Login Modal */}
+      <AnimatePresence>
+        {isAdminModalOpen && (
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50 p-4" id="admin-login-modal">
+            {/* Backdrop click to close */}
+            <div className="absolute inset-0" onClick={() => setIsAdminModalOpen(false)} />
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              transition={{ duration: 0.2 }}
+              className="bg-white border border-black/[0.08] rounded-md shadow-2xl p-6 sm:p-8 max-w-sm w-full relative z-10 space-y-6"
+            >
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setIsAdminModalOpen(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 cursor-pointer focus:outline-none"
+                title="閉じる"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <div className="space-y-2 text-center">
+                <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto text-brand-green">
+                  <Lock className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif font-semibold text-lg text-brand-charcoal">
+                  管理者用ログイン
+                </h3>
+                <p className="text-xs text-brand-charcoal/60 leading-relaxed">
+                  店舗情報の管理・写真を変更するには、<br />パスワードを入力してください。
+                </p>
+              </div>
+
+              <form onSubmit={handleAdminLogin} className="space-y-4">
+                <div className="space-y-1.5">
+                  <label htmlFor="admin-password" className="text-[10px] font-bold text-brand-charcoal/50 tracking-wider uppercase block">
+                    パスワード
+                  </label>
+                  <input
+                    id="admin-password"
+                    type="password"
+                    placeholder="パスワードを入力"
+                    value={adminPasswordInput}
+                    onChange={(e) => {
+                      setAdminPasswordInput(e.target.value);
+                      if (passwordError) setPasswordError('');
+                    }}
+                    className="w-full px-3 py-2 border border-gray-200 rounded-[2px] text-sm focus:outline-none focus:border-brand-green/80 focus:ring-1 focus:ring-brand-green/30 transition-all bg-gray-50/30 text-brand-charcoal"
+                    autoFocus
+                  />
+                  {passwordError && (
+                    <p className="text-xs text-red-500 font-medium" id="login-error-msg">
+                      {passwordError}
+                    </p>
+                  )}
+                  <p className="text-[10px] text-brand-charcoal/40 leading-relaxed pt-1">
+                    ※ デモ用パスワード：<code className="bg-gray-100 px-1 py-0.5 rounded text-brand-green font-mono font-bold">miyamachi</code>
+                  </p>
+                </div>
+
+                <div className="flex gap-3 pt-2">
+                  <button
+                    type="button"
+                    onClick={() => setIsAdminModalOpen(false)}
+                    className="flex-1 bg-gray-50 hover:bg-gray-100 text-brand-charcoal/70 border border-gray-200/50 text-xs font-semibold py-2.5 rounded-[2px] cursor-pointer transition-colors"
+                  >
+                    キャンセル
+                  </button>
+                  <button
+                    type="submit"
+                    className="flex-1 bg-brand-green hover:bg-brand-green-hover text-white text-xs font-semibold py-2.5 rounded-[2px] cursor-pointer transition-colors shadow-xs"
+                  >
+                    ログイン
+                  </button>
+                </div>
+              </form>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

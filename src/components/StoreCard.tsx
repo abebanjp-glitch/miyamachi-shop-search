@@ -13,6 +13,7 @@ interface StoreCardProps {
   onUpdateImage?: (imageUrl: string) => void;
   onSelectCategory?: (category: string) => void;
   onSelectArea?: (area: string) => void;
+  isAdmin?: boolean;
 }
 
 // Utility to escape regex special characters
@@ -210,7 +211,7 @@ export const getStoreImageUrl = (store: Store, customImage?: string) => {
   return list[index];
 };
 
-export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavorite = false, onToggleFavorite, customImage, onUpdateImage, onSelectCategory, onSelectArea }) => {
+export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavorite = false, onToggleFavorite, customImage, onUpdateImage, onSelectCategory, onSelectArea, isAdmin = false }) => {
   const catColor = getCategoryColor(store.category);
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.address + ' ' + store.name)}`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(store.address + ' ' + store.name)}`;
@@ -330,15 +331,17 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavo
         </button>
 
         {/* Change Image Trigger Button */}
-        <button
-          type="button"
-          onClick={openModal}
-          className="absolute top-3 right-3 bg-white/95 backdrop-blur-md hover:bg-white text-gray-700 hover:text-brand-green p-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer z-10 flex items-center justify-center border border-gray-200/80 hover:scale-105 active:scale-95"
-          title="写真を変更する"
-          id={`change-image-btn-${store.id}`}
-        >
-          <Camera className="w-4 h-4" />
-        </button>
+        {isAdmin && (
+          <button
+            type="button"
+            onClick={openModal}
+            className="absolute top-3 right-3 bg-white/95 backdrop-blur-md hover:bg-white text-gray-700 hover:text-brand-green p-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer z-10 flex items-center justify-center border border-gray-200/80 hover:scale-105 active:scale-95"
+            title="写真を変更する"
+            id={`change-image-btn-${store.id}`}
+          >
+            <Camera className="w-4 h-4" />
+          </button>
+        )}
 
         {customImage && (
           <span className="absolute bottom-3 left-3 bg-brand-green text-white text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-[2px] shadow-xs border border-white/25">
