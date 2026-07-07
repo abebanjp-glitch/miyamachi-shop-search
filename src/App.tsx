@@ -5,7 +5,7 @@ import storesData from './data/miyamachi_stores.json';
 import { CATEGORIES, AREAS } from './data/constants';
 import { StoreCard } from './components/StoreCard';
 import { SearchFilters } from './components/SearchFilters';
-import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX } from 'lucide-react';
+import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX, Star } from 'lucide-react';
 import { HeroSlider } from './components/HeroSlider';
 import { playBGM, pauseBGM } from './utils/audio';
 
@@ -111,7 +111,7 @@ const AnimatedTitle = () => {
       animate="visible"
       className="text-[14px] min-[360px]:text-[16px] min-[390px]:text-[18px] sm:text-xl md:text-2.5xl font-serif font-normal tracking-[0.12em] text-brand-charcoal leading-tight mb-4 whitespace-nowrap flex justify-center flex-wrap"
     >
-      <span className="sr-only">宮町商店街 店舗検索｜仙台市青葉区宮町の176店舗をさがす</span>
+      <span className="sr-only">宮町商店街 店舗検索｜仙台市青葉区宮町の{storesData.length}店舗をさがす</span>
       {characters.map((char, index) => (
         <motion.span
           key={index}
@@ -148,6 +148,32 @@ export default function App() {
   // BGM State (Default is muted/off)
   const [bgmOn, setBgmOn] = useState<boolean>(false);
 
+  // Dynamically update document title & meta tags to avoid hardcoded numbers and match current storesData length
+  useEffect(() => {
+    const totalCount = stores.length;
+    document.title = `宮町商店街 店舗検索｜仙台市青葉区宮町の${totalCount}店舗をさがす`;
+    
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', `仙台市青葉区・宮町商店街の店舗検索サイト。業種・エリア・キーワードから、宮町、東照宮、小田原、小松島など10エリア${totalCount}店舗を簡単に検索できます。営業時間や取扱商品、地図情報も掲載。`);
+    }
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', `宮町商店街 店舗検索｜仙台市青葉区宮町の${totalCount}店舗をさがす`);
+    }
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+      ogDesc.setAttribute('content', `仙台市青葉区・宮町商店街の店舗を業種・エリア・キーワードから検索。宮町、東照宮、小田原など10エリア${totalCount}店舗の営業時間・取扱商品情報を掲載。`);
+    }
+
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', `宮町商店街 店舗検索｜仙台市青葉区宮町の${totalCount}店舗をさがす`);
+    }
+  }, [stores.length]);
+
   // Synchronize BGM playback with volume fades
   useEffect(() => {
     if (bgmOn) {
@@ -165,6 +191,31 @@ export default function App() {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<SortKey>('id');
+
+  // Favorites state with LocalStorage persistence
+  const [favorites, setFavorites] = useState<number[]>(() => {
+    try {
+      const saved = localStorage.getItem('miyamachi_favorite_stores');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [showOnlyFavorites, setShowOnlyFavorites] = useState<boolean>(false);
+
+  const handleToggleFavorite = (storeId: number) => {
+    setFavorites((prev) => {
+      const next = prev.includes(storeId)
+        ? prev.filter((id) => id !== storeId)
+        : [...prev, storeId];
+      try {
+        localStorage.setItem('miyamachi_favorite_stores', JSON.stringify(next));
+      } catch (err) {
+        console.error('Failed to save favorites:', err);
+      }
+      return next;
+    });
+  };
   
   // Custom Images state with LocalStorage persistence
   const [customImages, setCustomImages] = useState<Record<number, string>>(() => {
@@ -244,6 +295,11 @@ export default function App() {
   const filteredStores = useMemo(() => {
     let result = [...stores];
 
+    // 0. Only show favorites filter
+    if (showOnlyFavorites) {
+      result = result.filter((store) => favorites.includes(store.id));
+    }
+
     // 1. Category Filter
     if (selectedCategories.length > 0) {
       result = result.filter((store) => selectedCategories.includes(store.category));
@@ -276,12 +332,12 @@ export default function App() {
     }
 
     return result;
-  }, [stores, selectedCategories, selectedAreas, searchQuery]);
+  }, [stores, selectedCategories, selectedAreas, searchQuery, showOnlyFavorites, favorites]);
 
   // Reset pagination count when filters change
   useEffect(() => {
     setVisibleCount(ITEMS_PER_PAGE);
-  }, [selectedCategories, selectedAreas, searchQuery]);
+  }, [selectedCategories, selectedAreas, searchQuery, showOnlyFavorites]);
 
   // Sorting Logic
   const sortedAndFilteredStores = useMemo(() => {
@@ -313,6 +369,7 @@ export default function App() {
     setSelectedAreas([]);
     setSearchQuery('');
     setSortBy('id');
+    setShowOnlyFavorites(false);
   };
 
   const handleRemoveCategory = (cat: string) => {
@@ -362,7 +419,7 @@ export default function App() {
             <br />
             四百年、この道は誰かの行きつけでした。
             <br />
-            次はあなたのお店を。——全176店舗から、さがす。
+            次はあなたのお店を。——全{stores.length}店舗から、さがす。
           </p>
           {/* Logo Combo */}
           <div className="flex flex-col items-center gap-4 w-full" id="logo-container">
@@ -441,6 +498,24 @@ export default function App() {
               <ExternalLink className="w-3 h-3 opacity-60" />
             </a>
 
+            {/* Favorites Toggle Switch */}
+            <div className="mt-5 flex items-center justify-center gap-3 bg-white/75 backdrop-blur-md border border-black/[0.04] rounded-full px-5 py-2 shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-md" id="favorites-toggle-container">
+              <button
+                type="button"
+                onClick={() => setShowOnlyFavorites((prev) => !prev)}
+                className="flex items-center gap-3 group cursor-pointer focus:outline-none"
+                id="favorites-toggle-button"
+              >
+                <div className={`w-9 h-5 rounded-full p-0.5 transition-colors duration-300 ease-in-out flex items-center ${showOnlyFavorites ? 'bg-amber-400' : 'bg-gray-200'}`}>
+                  <div className={`w-4 h-4 rounded-full bg-white shadow-sm transform transition-transform duration-300 ease-in-out ${showOnlyFavorites ? 'translate-x-4' : 'translate-x-0'}`} />
+                </div>
+                <span className="text-xs sm:text-sm font-medium text-brand-charcoal/85 group-hover:text-brand-charcoal flex items-center gap-1.5 select-none transition-colors">
+                  <Star className={`w-4 h-4 transition-all duration-300 ${showOnlyFavorites ? 'fill-amber-400 text-amber-400 scale-110' : 'text-gray-400 group-hover:text-amber-500'}`} />
+                  <span>お気に入り店舗のみ表示 ({favorites.length}店舗)</span>
+                </span>
+              </button>
+            </div>
+
             {/* Hero Slider with 16:9 Aspect Ratio */}
             <div className="w-full mt-6 mb-2 sm:mt-12 sm:mb-6 flex justify-center">
               <HeroSlider />
@@ -492,10 +567,26 @@ export default function App() {
           <h2 className="sr-only">宮町商店街 店舗検索結果一覧</h2>
           
           {/* Active Filters Display */}
-          {(selectedCategories.length > 0 || selectedAreas.length > 0 || searchQuery) && (
+          {(selectedCategories.length > 0 || selectedAreas.length > 0 || searchQuery || showOnlyFavorites) && (
             <div className="bg-white border border-black/[0.05] rounded-[2px] p-4 mb-8 flex flex-wrap items-center gap-2 text-xs" style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.02)' }}>
               <span className="text-brand-charcoal/50 font-semibold tracking-wider uppercase shrink-0">現在の選択条件:</span>
               
+              {/* Favorites Only Badge */}
+              {showOnlyFavorites && (
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-amber-50 text-amber-600 px-2.5 py-1 rounded-[2px] border border-amber-200/50">
+                  <Star className="w-3 h-3 fill-amber-500 text-amber-500" />
+                  <span>お気に入り店舗のみ</span>
+                  <button
+                    type="button"
+                    onClick={() => setShowOnlyFavorites(false)}
+                    className="text-amber-500/60 hover:text-amber-600 focus:outline-none cursor-pointer"
+                    title="お気に入りフィルターを解除"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </span>
+              )}
+
               {/* Search Text */}
               {searchQuery && (
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-brand-green-light text-brand-green px-2.5 py-1 rounded-[2px] border border-brand-green/10">
@@ -594,6 +685,8 @@ export default function App() {
                       key={store.id}
                       store={store}
                       searchQuery={searchQuery}
+                      isFavorite={favorites.includes(store.id)}
+                      onToggleFavorite={handleToggleFavorite}
                       customImage={customImages[store.id]}
                       onUpdateImage={(url) => handleUpdateImage(store.id, url)}
                       onSelectCategory={(cat) => {

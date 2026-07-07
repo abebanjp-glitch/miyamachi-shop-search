@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, X, RotateCcw, SlidersHorizontal, MapPin, Tag, ArrowUpDown } from 'lucide-react';
+import { motion } from 'motion/react';
 import { CATEGORIES, AREAS } from '../data/constants';
 import { SortKey } from '../types';
 
@@ -214,7 +215,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
 
             {/* Quick Pills for Area */}
             <div className="space-y-3 pt-3 border-t border-gray-100/50">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between flex-wrap gap-2">
                 <span className="text-[11px] font-semibold text-brand-charcoal/40 tracking-[0.05em]">
                   地区から選択する
                 </span>
@@ -266,19 +267,19 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                 <input
                   id="keyword-search"
                   type="text"
-                  className="w-full bg-transparent border-b border-gray-200 py-3 sm:py-2.5 pl-8 pr-8 text-base sm:text-sm text-brand-charcoal placeholder-brand-charcoal/30 focus:border-brand-green focus:outline-none rounded-none transition-all"
+                  className="text-base sm:text-sm text-brand-charcoal placeholder-brand-charcoal/30 focus:border-brand-green focus:outline-none transition-all"
                   placeholder="店名、取扱商品、サービス内容、住所など..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none text-brand-charcoal/40">
+                <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-brand-charcoal/40">
                   <Search className="h-4 w-4" />
                 </div>
                 {searchQuery && (
                   <button
                     type="button"
                     onClick={() => setSearchQuery('')}
-                    className="absolute inset-y-0 right-0 flex items-center text-brand-charcoal/30 hover:text-brand-charcoal/60 transition-colors"
+                    className="absolute inset-y-0 right-3 flex items-center text-brand-charcoal/30 hover:text-brand-charcoal/60 transition-colors"
                     title="クリア"
                     id="clear-keyword-btn"
                   >

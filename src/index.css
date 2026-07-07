@@ -20,11 +20,34 @@
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--color-brand-base);
-  color: var(--color-brand-charcoal);
-  line-height: 1.8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa; /* 少しグレーがかった白で高級感を */
+  color: #333;
   -webkit-font-smoothing: antialiased;
+}
+
+/* カード型デザインの適用 */
+.shop-card {
+  background: white;
+  border-radius: 12px; /* 角を丸くして柔らかく */
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 控えめな影で浮き出し効果 */
+  transition: transform 0.2s ease;
+}
+
+.shop-card:hover {
+  transform: translateY(-5px); /* マウスオーバーで浮き上がる演出 */
+}
+
+/* 検索窓を美しく */
+input[type="text"] {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 36px 12px 36px; /* 虫眼鏡とクリアボタン用の左右パディング */
+  background-color: white; /* 背景白で視認性を高く */
+  width: 100%;
+  max-width: 400px;
 }
 
 /* Custom styles for accessibility and high contrast */

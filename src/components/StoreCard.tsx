@@ -1,12 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, Phone, Clock, Calendar, ShoppingBag, ExternalLink, Camera, Upload, X, Link, Trash2, Navigation } from 'lucide-react';
+import { MapPin, Phone, Clock, Calendar, ShoppingBag, ExternalLink, Camera, Upload, X, Link, Trash2, Navigation, Star } from 'lucide-react';
 import { Store } from '../types';
 import { getCategoryColor } from '../data/constants';
 
 interface StoreCardProps {
   store: Store;
   searchQuery: string;
+  isFavorite?: boolean;
+  onToggleFavorite?: (storeId: number) => void;
   customImage?: string;
   onUpdateImage?: (imageUrl: string) => void;
   onSelectCategory?: (category: string) => void;
@@ -208,7 +210,7 @@ export const getStoreImageUrl = (store: Store, customImage?: string) => {
   return list[index];
 };
 
-export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, customImage, onUpdateImage, onSelectCategory, onSelectArea }) => {
+export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavorite = false, onToggleFavorite, customImage, onUpdateImage, onSelectCategory, onSelectArea }) => {
   const catColor = getCategoryColor(store.category);
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.address + ' ' + store.name)}`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(store.address + ' ' + store.name)}`;
@@ -289,11 +291,11 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.25 }}
-      className="bg-white rounded-[2px] border border-black/[0.06] hover:border-brand-green/50 transition-all duration-300 ease-out flex flex-col overflow-hidden relative shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_3px_10px_rgba(0,0,0,0.05)]"
+      className="shop-card border border-black/[0.06] hover:border-brand-green/50 flex flex-col overflow-hidden relative"
       id={`store-card-${store.id}`}
     >
       {/* Store Image Cover */}
-      <div className="relative aspect-video w-full sm:h-auto sm:aspect-video sm:w-[70%] sm:mx-auto sm:mt-5 sm:rounded-[2px] overflow-hidden bg-gray-100 flex-none group">
+      <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-gray-100 flex-none group">
         <img
           src={getStoreImageUrl(store, customImage)}
           alt=""
@@ -309,6 +311,24 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, custom
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
         
+        {/* Favorite Trigger Button */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleFavorite?.(store.id);
+          }}
+          className={`absolute top-3 left-3 p-2 rounded-full shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer z-10 flex items-center justify-center border hover:scale-110 active:scale-95 ${
+            isFavorite
+              ? 'bg-amber-400 border-amber-400 text-white shadow-amber-400/20'
+              : 'bg-white/95 backdrop-blur-md border-gray-200/80 text-gray-400 hover:text-amber-500'
+          }`}
+          title={isFavorite ? 'お気に入りから外す' : 'お気に入りに追加する'}
+          id={`favorite-btn-${store.id}`}
+        >
+          <Star className={`w-4 h-4 transition-transform duration-300 ${isFavorite ? 'fill-current text-white scale-110' : ''}`} />
+        </button>
+
         {/* Change Image Trigger Button */}
         <button
           type="button"
