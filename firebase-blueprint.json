@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "StoreViews": {
+      "title": "StoreViews",
+      "description": "Represents the real-time view counts for each store.",
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "description": "Number of views"
+        }
+      },
+      "required": ["count"]
+    }
+  },
+  "firestore": {
+    "/store_views/{storeId}": {
+      "schema": "StoreViews",
+      "description": "Real-time view count for a specific store"
+    }
+  }
+}

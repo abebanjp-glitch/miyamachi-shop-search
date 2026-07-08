@@ -145,6 +145,18 @@ export default function App() {
   // Convert untyped JSON to typed Store[]
   const stores = storesData as Store[];
 
+  // Shuffled stores for initial display (created once on page load using Fisher-Yates)
+  const [shuffledStores] = useState<Store[]>(() => {
+    const copy = [...(storesData as Store[])];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = copy[i];
+      copy[i] = copy[j];
+      copy[j] = temp;
+    }
+    return copy;
+  });
+
   // BGM State (Default is muted/off)
   const [bgmOn, setBgmOn] = useState<boolean>(false);
 
@@ -331,7 +343,17 @@ export default function App() {
 
   // Multi-word partial search + category + area filters
   const filteredStores = useMemo(() => {
-    let result = [...stores];
+    // Shuffled array is used if it's the initial state (no categories, areas, search keyword, favorites, or non-default sorting selected)
+    const isInitialState = 
+      selectedCategories.length === 0 && 
+      selectedAreas.length === 0 && 
+      !searchQuery.trim() && 
+      !showOnlyFavorites &&
+      sortBy === 'id';
+
+    let result = isInitialState && shuffledStores.length > 0
+      ? [...shuffledStores]
+      : [...stores];
 
     // 0. Only show favorites filter
     if (showOnlyFavorites) {
@@ -370,7 +392,7 @@ export default function App() {
     }
 
     return result;
-  }, [stores, selectedCategories, selectedAreas, searchQuery, showOnlyFavorites, favorites]);
+  }, [stores, shuffledStores, selectedCategories, selectedAreas, searchQuery, showOnlyFavorites, favorites, sortBy]);
 
   // Reset pagination count when filters change
   useEffect(() => {
@@ -389,9 +411,22 @@ export default function App() {
     if (sortBy === 'category') {
       return items.sort((a, b) => a.category.localeCompare(b.category, 'ja'));
     }
+
+    // Check if we are in the initial display state where we should keep the shuffle
+    const isInitialState = 
+      selectedCategories.length === 0 && 
+      selectedAreas.length === 0 && 
+      !searchQuery.trim() && 
+      !showOnlyFavorites &&
+      sortBy === 'id';
+
+    if (isInitialState) {
+      return items; // Keep shuffled order
+    }
+
     // Default Shinto order or registration sequence
     return items.sort((a, b) => a.id - b.id);
-  }, [filteredStores, sortBy]);
+  }, [filteredStores, sortBy, selectedCategories, selectedAreas, searchQuery, showOnlyFavorites]);
 
   // Slice visible stores
   const visibleStores = useMemo(() => {

@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, Phone, Clock, Calendar, ShoppingBag, ExternalLink, Camera, Upload, X, Link, Trash2, Navigation, Star } from 'lucide-react';
+import { MapPin, Phone, Clock, Calendar, ShoppingBag, ExternalLink, Camera, Upload, X, Link, Trash2, Navigation, Star, Eye } from 'lucide-react';
 import { Store } from '../types';
 import { getCategoryColor } from '../data/constants';
+import { incrementStoreViews, subscribeToStoreViews, resetStoreViews } from '../utils/firebase';
 
 interface StoreCardProps {
   store: Store;
@@ -216,6 +217,38 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavo
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.address + ' ' + store.name)}`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(store.address + ' ' + store.name)}`;
 
+  // View count state and real-time Firestore synchronization
+  const [firestoreViews, setFirestoreViews] = useState<number>(0);
+  const baseCount = 10;
+  const viewCount = baseCount + firestoreViews;
+
+  useEffect(() => {
+    // Subscribe to real-time view updates from Firestore
+    const unsubscribe = subscribeToStoreViews(store.id, (count) => {
+      setFirestoreViews(count);
+    });
+
+    // Increment after 1 second of engagement (simulating genuine interest)
+    const timer = setTimeout(() => {
+      incrementStoreViews(store.id);
+    }, 1000);
+
+    return () => {
+      unsubscribe();
+      clearTimeout(timer);
+    };
+  }, [store.id]);
+
+  const handleUserInteraction = () => {
+    incrementStoreViews(store.id);
+  };
+
+  const handleResetViews = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!confirm(`「${store.name}」の追加閲覧数をリセットしますか？`)) return;
+    await resetStoreViews(store.id);
+  };
+
   // Photo editing states
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputUrl, setInputUrl] = useState('');
@@ -382,11 +415,11 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavo
           <div className="flex-1 min-w-0">
             <span className="block text-[13px] leading-relaxed break-words">{store.address}</span>
             <div className="flex gap-2 mt-2.5">
-              <a href={mapsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1.5 flex-1 py-2.5 text-[12px] font-semibold text-brand-green border border-brand-green/30 rounded-[2px] hover:bg-brand-green hover:text-white transition-all cursor-pointer" id={`maps-link-${store.id}`}>
+              <a href={mapsUrl} target="_blank" rel="noreferrer" onClick={handleUserInteraction} className="inline-flex items-center justify-center gap-1.5 flex-1 py-2.5 text-[12px] font-semibold text-brand-green border border-brand-green/30 rounded-[2px] hover:bg-brand-green hover:text-white transition-all cursor-pointer" id={`maps-link-${store.id}`}>
                 <MapPin className="w-3.5 h-3.5" />
                 <span>地図で見る</span>
               </a>
-              <a href={directionsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1.5 flex-1 py-2.5 text-[12px] font-semibold text-white bg-brand-green hover:bg-brand-green-hover border border-brand-green rounded-[2px] transition-all cursor-pointer" id={`directions-link-${store.id}`}>
+              <a href={directionsUrl} target="_blank" rel="noreferrer" onClick={handleUserInteraction} className="inline-flex items-center justify-center gap-1.5 flex-1 py-2.5 text-[12px] font-semibold text-white bg-brand-green hover:bg-brand-green-hover border border-brand-green rounded-[2px] transition-all cursor-pointer" id={`directions-link-${store.id}`}>
                 <Navigation className="w-3.5 h-3.5" />
                 <span>ルート案内</span>
               </a>
@@ -401,6 +434,7 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavo
             {store.phone ? (
               <a
                 href={`tel:${store.phone.replace(/[^0-9-]/g, '')}`}
+                onClick={handleUserInteraction}
                 className="inline-flex items-center py-3 -my-3 text-[13px] font-semibold text-brand-charcoal hover:text-brand-accent hover:underline transition-colors focus:outline-none"
                 id={`phone-link-${store.id}`}
               >
@@ -445,6 +479,7 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavo
                 href={store.website}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleUserInteraction}
                 className="text-[13px] font-medium text-brand-charcoal hover:text-brand-accent hover:underline transition-colors break-all inline-flex items-center gap-1"
                 id={`website-link-${store.id}`}
               >
@@ -457,7 +492,7 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavo
       </div>
 
       {/* Services and products */}
-      <div className="p-6 pt-5 bg-white mt-auto">
+      <div className="p-6 pt-5 bg-white">
         <div className="flex items-start gap-2.5">
           <ShoppingBag className="w-4 h-4 text-brand-gold mt-0.5 shrink-0" />
           <div className="flex-1 min-w-0">
@@ -469,6 +504,32 @@ export const StoreCard: React.FC<StoreCardProps> = ({ store, searchQuery, isFavo
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Card Footer with View Counter */}
+      <div className="px-6 py-3 bg-gray-50/40 border-t border-black/[0.03] flex items-center justify-between mt-auto" id={`store-footer-${store.id}`}>
+        <div className="flex items-center gap-1.5 text-[11px] font-medium text-brand-charcoal/40" id={`view-count-container-${store.id}`}>
+          <Eye className="w-3.5 h-3.5 text-brand-charcoal/30" />
+          <span>
+            閲覧数: <span className="font-mono font-bold text-brand-charcoal/60 text-xs">{viewCount.toLocaleString()}</span> 回
+          </span>
+          {isAdmin && (
+            <button
+              type="button"
+              onClick={handleResetViews}
+              className="ml-1 text-[10px] text-red-400 hover:text-red-600 transition-colors cursor-pointer border border-red-200 bg-red-50/50 hover:bg-red-50 px-1 rounded-[2px]"
+              title="閲覧数を初期状態にリセット"
+              id={`reset-views-btn-${store.id}`}
+            >
+              リセット
+            </button>
+          )}
+        </div>
+        {viewCount > 20 && (
+          <span className="text-[9px] font-bold text-brand-gold bg-brand-gold-light/60 px-1.5 py-0.5 rounded-[2px] tracking-wider uppercase border border-brand-gold/10">
+            人気
+          </span>
+        )}
       </div>
 
       {/* Modal for editing image */}
