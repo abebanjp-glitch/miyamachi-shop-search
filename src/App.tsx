@@ -12,9 +12,9 @@ import { playBGM, pauseBGM } from './utils/audio';
 const LogoSVG = () => {
   // 決定された公式ロゴカラー（③ 東照宮の伝統美）
   const colors = {
-    torii: '#C59B27', // 絢爛な金箔・金泥ゴールド
-    curve: '#1F1F1F', // 重厚な漆塗りの漆黒
-    dot: '#D63C3C'    // 神威と人情の朱赤
+    torii: '#E8A317', // 鮮やかな金色へ変更
+    curve: '#006036', // ご指定の深みのある緑（#006036）へ変更
+    dot: '#E60012'    // 鮮やかな朱色へ変更
   };
 
   return (
