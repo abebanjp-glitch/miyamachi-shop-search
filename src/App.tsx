@@ -5,14 +5,14 @@ import storesData from './data/miyamachi_stores.json';
 import { CATEGORIES, AREAS } from './data/constants';
 import { StoreCard } from './components/StoreCard';
 import { SearchFilters } from './components/SearchFilters';
-import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX, Star, Lock, Unlock } from 'lucide-react';
+import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX, Star, Lock, Unlock, Download } from 'lucide-react';
 import { HeroSlider } from './components/HeroSlider';
 import { playBGM, pauseBGM } from './utils/audio';
 
 const LogoSVG = () => {
   // 決定された公式ロゴカラー（③ 東照宮の伝統美）
   const colors = {
-    torii: '#E8A317', // 鮮やかな金色へ変更
+    torii: '#A1A1AA', // 淡色のグレー（シックで上品なグレー）へ変更
     curve: '#006036', // ご指定の深みのある緑（#006036）へ変更
     dot: '#E60012'    // 鮮やかな朱色へ変更
   };
@@ -20,10 +20,68 @@ const LogoSVG = () => {
   return (
     <svg
       viewBox="0 0 100 100"
-      className="w-16 h-16 sm:w-24 sm:h-24 shrink-0"
+      className="w-[74px] h-[74px] sm:w-[110px] sm:h-[110px] shrink-0"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <defs>
+        {/* 輝くシルバー（プラチナ・銀色）の線形グラデーション */}
+        <linearGradient id="silver-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#E2E8F0" />
+          <stop offset="20%" stopColor="#FFFFFF" />
+          <stop offset="40%" stopColor="#CBD5E1" />
+          <stop offset="60%" stopColor="#F8FAFC" />
+          <stop offset="80%" stopColor="#94A3B8" />
+          <stop offset="100%" stopColor="#475569" />
+        </linearGradient>
+
+        {/* 絞り染めの滲み・繊維の揺らぎを表現する高品質SVGフィルター */}
+        <filter id="shibori-bleed" x="-30%" y="-30%" width="160%" height="160%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.12" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+          <feGaussianBlur in="displaced" stdDeviation="3.5" result="blurred" />
+          <feMerge>
+            <feMergeNode in="blurred" />
+            <feMergeNode in="SourceGraphic" opacity="0.1" />
+          </feMerge>
+        </filter>
+
+        {/* 絞り染め（雪花絞り風）のグラデーション：淡い桜色（#F9D9E0）をベースにした上品な色調 */}
+        <radialGradient id="shibori-grad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FCEDF0" stopOpacity="0.95" />
+          <stop offset="35%" stopColor="#F9D9E0" stopOpacity="0.8" />
+          <stop offset="70%" stopColor="#F4BCC7" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="#F9D9E0" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      {/* 絞り染め（雪花絞り風）の背景装飾：全体を20%縮小し、緑の図形や赤丸とのバランスを整えるため左上に配置 */}
+      <g filter="url(#shibori-bleed)" opacity="0.8" transform="translate(34, 44) scale(0.8) translate(-42, -54)">
+        {/* 1. 外側の雪花絞り（抽象的な六角星型の染め模様） */}
+        <path
+          d="M 76 54 Q 65 60 59 83.4 Q 50 75 25 83.4 Q 26 68 8 54 Q 20 48 25 24.6 Q 37 34 59 24.6 Q 62 42 76 54 Z"
+          fill="url(#shibori-grad)"
+        />
+
+        {/* 2. 内側のやや濃い2層目の染め（濃淡の揺らぎ・グラデーション感の演出） */}
+        <path
+          d="M 66 54 Q 58 58 54 74 Q 48 68 30 74 Q 31 63 18 54 Q 27 50 30 34 Q 39 41 54 34 Q 56 46 66 54 Z"
+          fill="#F5BCC8"
+          opacity="0.35"
+        />
+
+        {/* 3. 雪花絞り特有の折り目・筋（伝統的な技法の質感を模した微細なストローク） */}
+        <line x1="42" y1="54" x2="76" y2="54" stroke="#F5BCC8" strokeWidth="1.2" opacity="0.3" strokeDasharray="1.5 1" />
+        <line x1="42" y1="54" x2="59" y2="83.4" stroke="#F5BCC8" strokeWidth="1.2" opacity="0.3" strokeDasharray="1.5 1" />
+        <line x1="42" y1="54" x2="25" y2="83.4" stroke="#F5BCC8" strokeWidth="1.2" opacity="0.3" strokeDasharray="1.5 1" />
+        <line x1="42" y1="54" x2="8" y2="54" stroke="#F5BCC8" strokeWidth="1.2" opacity="0.3" strokeDasharray="1.5 1" />
+        <line x1="42" y1="54" x2="25" y2="24.6" stroke="#F5BCC8" strokeWidth="1.2" opacity="0.3" strokeDasharray="1.5 1" />
+        <line x1="42" y1="54" x2="59" y2="24.6" stroke="#F5BCC8" strokeWidth="1.2" opacity="0.3" strokeDasharray="1.5 1" />
+
+        {/* 4. 中心部の染め残り風の表現（淡いコントラスト） */}
+        <circle cx="42" cy="54" r="8" fill="#FCEDF0" opacity="0.55" />
+      </g>
+
       {/* 1. 石鳥居 (「お」の1〜2画目を兼ねた、格調高いゴールド。実物の東照宮の石造りの佇まいに絢爛な光を添えて) */}
       {/* 笠木・島木（上のそり返った横棒） */}
       <path 
@@ -54,13 +112,15 @@ const LogoSVG = () => {
       />
  
       {/* 2. 「お」の3画目（漆黒。流れるような美しい曲線ストローク） */}
-      <path 
-        d="M 49 53 C 60 53, 75 56, 73 69 C 71 80, 50 83, 37 77 C 29 73, 27 65, 34 59 C 41 53, 51 55, 55 62 C 57 66, 55 70, 50 70 C 46 70, 44 66, 47 63 C 49 61, 52 62, 52 64" 
-        stroke={colors.curve}
-        strokeWidth="4" 
-        strokeLinecap="round" 
-        strokeLinejoin="round" 
-      />
+      <g transform="translate(51, 68) scale(0.85) translate(-51, -68)">
+        <path 
+          d="M 49 53 C 60 53, 75 56, 73 69 C 71 80, 50 83, 37 77 C 29 73, 27 65, 34 59 C 41 53, 51 55, 55 62 C 57 66, 55 70, 50 70 C 46 70, 44 66, 47 63 C 49 61, 52 62, 52 64" 
+          stroke={colors.curve}
+          strokeWidth="4" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+        />
+      </g>
       
       {/* 3. 右上の丸 (「お」の4画目の点。神威と人情を包む朱赤) */}
       <circle 
@@ -291,6 +351,59 @@ export default function App() {
       localStorage.setItem('miyamachi_admin_mode', 'false');
     } catch (err) {
       console.error('Failed to clear admin state:', err);
+    }
+  };
+
+  // ZIP Download States
+  const [isDownloadingZip, setIsDownloadingZip] = useState<boolean>(false);
+  const [downloadProgressText, setDownloadProgressText] = useState<string>('');
+
+  const handleDownloadZip = async () => {
+    setIsDownloadingZip(true);
+    setDownloadProgressText('準備中...');
+    try {
+      const pathname = window.location.pathname;
+      const zipUrl = pathname.includes('/miyamachi-shop-search')
+        ? '/miyamachi-shop-search/project.zip'
+        : '/project.zip';
+
+      console.log('Fetching ZIP from dynamic URL:', zipUrl);
+      setDownloadProgressText('ロード中...');
+      
+      const response = await fetch(zipUrl);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const blob = await response.blob();
+      
+      if (blob.size === 0 || blob.type.includes('text/html')) {
+        throw new Error('Downloaded file is empty or invalid (HTML template returned).');
+      }
+
+      setDownloadProgressText('展開中...');
+      const downloadUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = 'miyamachi-shop-search.zip';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(downloadUrl);
+      setDownloadProgressText('完了！');
+      setTimeout(() => setDownloadProgressText(''), 2500);
+    } catch (err) {
+      console.error('ZIP fetch failed, falling back to direct open:', err);
+      const pathname = window.location.pathname;
+      const fallbackUrl = pathname.includes('/miyamachi-shop-search')
+        ? '/miyamachi-shop-search/project.zip'
+        : '/project.zip';
+      
+      window.open(fallbackUrl, '_blank');
+      setDownloadProgressText('別タブで開きました');
+      setTimeout(() => setDownloadProgressText(''), 4000);
+    } finally {
+      setIsDownloadingZip(false);
     }
   };
   
@@ -887,6 +1000,27 @@ export default function App() {
                       <span>管理者ログアウト</span>
                     </button>
                   )}
+                </li>
+                <li className="pt-2 border-t border-gray-800/30 flex flex-col gap-1">
+                  <button
+                    type="button"
+                    onClick={handleDownloadZip}
+                    disabled={isDownloadingZip}
+                    className="text-brand-gold/90 hover:text-brand-gold disabled:text-gray-500 transition-colors text-[11px] font-semibold flex items-center gap-1.5 focus:outline-none cursor-pointer text-left"
+                    id="developer-zip-download-trigger"
+                  >
+                    {isDownloadingZip ? (
+                      <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <Download className="w-3.5 h-3.5" />
+                    )}
+                    <span>
+                      {downloadProgressText ? `ZIP準備中: ${downloadProgressText}` : '最新ソースコード(ZIP)をダウンロード'}
+                    </span>
+                  </button>
+                  <p className="text-[9px] text-gray-500 leading-normal">
+                    ※ プレビューのiframe環境でダウンロードできない場合は、右上の「Visit」ボタンから別タブでアプリを開いてお試しください。
+                  </p>
                 </li>
               </ul>
             </div>
