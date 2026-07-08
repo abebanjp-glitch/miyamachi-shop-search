@@ -527,20 +527,18 @@ export default function App() {
                 <LogoSVG />
               </motion.div>
               <div className="text-left border-l border-black/[0.08] pl-4 py-1 whitespace-nowrap">
-                <motion.h2 
-                  className="font-serif font-semibold tracking-[0.15em] text-lg sm:text-3.5xl leading-none flex items-baseline whitespace-nowrap"
+                <motion.div 
+                  className="h-[22px] sm:h-[38px] flex items-center whitespace-nowrap"
                   style={{ transformOrigin: "46% center" }}
                   initial={{ 
                     opacity: 0, 
                     scale: 1.5,
                     rotateY: -180,
-                    color: "#B08D57" // Elegant Gold to start
                   }}
                   animate={{ 
                     opacity: 1, 
                     scale: 1,
                     rotateY: 0,
-                    color: "#1C1C1A" // Transitions to premium Charcoal Black
                   }}
                   transition={{ 
                     duration: 1.8,
@@ -548,8 +546,13 @@ export default function App() {
                     delay: 1.6
                   }}
                 >
-                  お宮町
-                </motion.h2>
+                  <img 
+                    src={`${import.meta.env.BASE_URL}omiyamachi_logo_transparent.png`} 
+                    alt="お宮町" 
+                    className="h-full w-auto object-contain block"
+                    referrerPolicy="no-referrer"
+                  />
+                </motion.div>
                 <motion.p 
                   className="text-[9px] tracking-[0.22em] text-brand-charcoal/50 font-semibold uppercase mt-2.5 leading-none whitespace-nowrap"
                   initial={{ opacity: 0, y: 4 }}
