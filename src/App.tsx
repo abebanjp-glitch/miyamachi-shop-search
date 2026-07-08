@@ -5,7 +5,7 @@ import storesData from './data/miyamachi_stores.json';
 import { CATEGORIES, AREAS } from './data/constants';
 import { StoreCard } from './components/StoreCard';
 import { SearchFilters } from './components/SearchFilters';
-import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX, Star, Lock, Unlock, Download } from 'lucide-react';
+import { AlertCircle, RefreshCw, ExternalLink, X, Music, VolumeX, Star, Lock, Unlock, Download, Image } from 'lucide-react';
 import { HeroSlider } from './components/HeroSlider';
 import { playBGM, pauseBGM } from './utils/audio';
 
@@ -406,6 +406,44 @@ export default function App() {
       setIsDownloadingZip(false);
     }
   };
+
+  const handleDownloadImage = async (fileName: string, defaultName: string) => {
+    try {
+      const pathname = window.location.pathname;
+      const fileUrl = pathname.includes('/miyamachi-shop-search')
+        ? `/miyamachi-shop-search/${fileName}`
+        : `/${fileName}`;
+
+      console.log('Fetching image from dynamic URL:', fileUrl);
+      const response = await fetch(fileUrl);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const blob = await response.blob();
+      
+      if (blob.size === 0 || blob.type.includes('text/html')) {
+        throw new Error('Downloaded file is empty or invalid (HTML template returned).');
+      }
+
+      const downloadUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = defaultName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(downloadUrl);
+    } catch (err) {
+      console.error('Image fetch failed, falling back to direct open in new tab:', err);
+      const pathname = window.location.pathname;
+      const fallbackUrl = pathname.includes('/miyamachi-shop-search')
+        ? `/miyamachi-shop-search/${fileName}`
+        : `/${fileName}`;
+      
+      window.open(fallbackUrl, '_blank');
+    }
+  };
   
   // Pagination State
   const [visibleCount, setVisibleCount] = useState<number>(ITEMS_PER_PAGE);
@@ -660,7 +698,7 @@ export default function App() {
                   }}
                 >
                   <img 
-                    src={`${import.meta.env.BASE_URL}omiyamachi_logo_transparent.png`} 
+                    src={`${import.meta.env.BASE_URL || '/'}logo_in_zip.png`} 
                     alt="お宮町" 
                     className="h-full w-auto object-contain block"
                     referrerPolicy="no-referrer"
@@ -1020,6 +1058,60 @@ export default function App() {
                   </button>
                   <p className="text-[9px] text-gray-500 leading-normal">
                     ※ プレビューのiframe環境でダウンロードできない場合は、右上の「Visit」ボタンから別タブでアプリを開いてお試しください。
+                  </p>
+                </li>
+                <li className="pt-2 border-t border-gray-800/30 flex flex-col gap-1.5">
+                  <span className="text-[10px] text-gray-400 font-medium">お宮町 公式ロゴマーク (1024×1024)</span>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => handleDownloadImage('miyamachi_logo_mark.png', 'miyamachi_logo_mark.png')}
+                      className="text-brand-gold/90 hover:text-brand-gold transition-colors text-[11px] font-semibold flex items-center gap-1 focus:outline-none cursor-pointer"
+                      id="official-logo-png-download-trigger"
+                    >
+                      <Image className="w-3 h-3" strokeWidth={2} />
+                      <span>PNG（背景透過）</span>
+                    </button>
+                    <span className="text-gray-600 text-[10px]">|</span>
+                    <button
+                      type="button"
+                      onClick={() => handleDownloadImage('miyamachi_logo_mark.jpg', 'miyamachi_logo_mark.jpg')}
+                      className="text-brand-gold/90 hover:text-brand-gold transition-colors text-[11px] font-semibold flex items-center gap-1 focus:outline-none cursor-pointer"
+                      id="official-logo-jpg-download-trigger"
+                    >
+                      <Image className="w-3 h-3" strokeWidth={2} />
+                      <span>JPG（背景白）</span>
+                    </button>
+                  </div>
+                  <p className="text-[9px] text-gray-500 leading-normal">
+                    ※ 絞り染めの背景装飾、お宮町の文字、鳥居と緑の曲線、赤丸を含む公式シンボルマーク。
+                  </p>
+                </li>
+                <li className="pt-2 border-t border-gray-800/30 flex flex-col gap-1.5">
+                  <span className="text-[10px] text-gray-400 font-medium">お宮町 毛筆ロゴ (筆文字テキスト)</span>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => handleDownloadImage('omiyamachi_logo_transparent.png', 'omiyamachi_logo_transparent.png')}
+                      className="text-brand-gold/90 hover:text-brand-gold transition-colors text-[11px] font-semibold flex items-center gap-1 focus:outline-none cursor-pointer"
+                      id="brush-logo-transparent-download-trigger"
+                    >
+                      <Image className="w-3 h-3" strokeWidth={2} />
+                      <span>PNG（背景透過）</span>
+                    </button>
+                    <span className="text-gray-600 text-[10px]">|</span>
+                    <button
+                      type="button"
+                      onClick={() => handleDownloadImage('omiyamachi_logo_white.png', 'omiyamachi_logo_white.png')}
+                      className="text-brand-gold/90 hover:text-brand-gold transition-colors text-[11px] font-semibold flex items-center gap-1 focus:outline-none cursor-pointer"
+                      id="brush-logo-white-download-trigger"
+                    >
+                      <Image className="w-3 h-3" strokeWidth={2} />
+                      <span>PNG（白文字・背景透過）</span>
+                    </button>
+                  </div>
+                  <p className="text-[9px] text-gray-500 leading-normal">
+                    ※ 「お宮町」の美しい伝統的な手書き毛筆（筆文字）のタイトルロゴ画像です。
                   </p>
                 </li>
               </ul>
