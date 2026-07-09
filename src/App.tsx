@@ -916,6 +916,9 @@ export default function App() {
                     </button>
                   )}
                 </li>
+                {/* 以下の3項目（ソースコードDL・公式ロゴ・毛筆ロゴ）は管理者ログイン中のみ表示 */}
+                {isAdmin && (
+                <>
                 <li className="pt-2 border-t border-gray-800/30 flex flex-col gap-1">
                   <button
                     type="button"
@@ -991,6 +994,8 @@ export default function App() {
                     ※ 「お宮町」の美しい伝統的な手書き毛筆（筆文字）のタイトルロゴ画像です。
                   </p>
                 </li>
+                </>
+                )}
               </ul>
             </div>
 
