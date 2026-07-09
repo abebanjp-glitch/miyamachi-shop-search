@@ -1065,9 +1065,6 @@ export default function App() {
                       {passwordError}
                     </p>
                   )}
-                  <p className="text-[10px] text-brand-charcoal/40 leading-relaxed pt-1">
-                    ※ デモ用パスワード：<code className="bg-gray-100 px-1 py-0.5 rounded text-brand-green font-mono font-bold">miyamachi</code>
-                  </p>
                 </div>
 
                 <div className="flex gap-3 pt-2">
