@@ -14,7 +14,7 @@ interface SlideItem {
 const SLIDES: SlideItem[] = [
   {
     id: 1,
-    imageFallback: `${import.meta.env.BASE_URL}torii.jpeg`,
+    imageFallback: `${import.meta.env.BASE_URL}torii01.jpg`,
     imageDefault: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&q=80&w=1600',
     title: '',
     description: '朱に染まらぬ、白い石鳥居。仙台東照宮の参道は、四百年前と変わらぬ静けさで、今日もこの町の入り口に立っています。',
