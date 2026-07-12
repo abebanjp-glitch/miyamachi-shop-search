@@ -152,6 +152,12 @@ async function generateAllImages() {
       .toFile('public/miyamachi_logo_mark.png');
     console.log('✓ Generated public/miyamachi_logo_mark.png (Transparent)');
 
+    // A-2. Duplicate Official Logo Mark to toriimark.png
+    await sharp(logoBuffer)
+      .png()
+      .toFile('public/toriimark.png');
+    console.log('✓ Generated public/toriimark.png (Transparent)');
+
     // B. Official Logo Mark - JPG (White Background)
     await sharp(logoBuffer)
       .flatten({ background: { r: 255, g: 255, b: 255 } })
